@@ -6,83 +6,18 @@
   box-sizing:border-box;
 }
 
-/* Animations -------------------------------------------------------------- */
-
-@keyframes fadein {
-  from {opacity:0;}
-  to   {opacity:1;}
-}
-
-*.kf-fadein {
-  animation:fadein 0.5s;
-}
-
-@keyframes fromleft {
-  from {opacity:0; left:-1rem;}
-  to   {opacity:1; left:0;}
-}
-
-*.kf-fromleft {
-  position:relative;
-  animation:fromleft 0.5s;
-}
-
-*.kf-fromleft-container > * {
-  position:relative;
-  animation:fromleft 0.5s;
-}
-
-@keyframes fromright {
-  from {opacity:0; right:-1rem;}
-  to   {opacity:1; right:0;}
-}
-
-*.kf-fromright {
-  position:relative;
-  animation:fromright 0.5s;
-}
-
-@keyframes fromtop {
-  from {opacity:0; top:-1rem;}
-  to   {opacity:1; top:0;}
-}
-
-*.kf-fromtop {
-  position:relative;
-  animation:fromtop 0.5s;
-}
-
-@keyframes frombottom {
-  from {opacity:0; bottom:-1rem;}
-  to   {opacity:1; bottom:0;}
-}
-
-*.kf-frombottom {
-  position:relative;
-  animation:frombottom 0.5s;
-}
-
-@keyframes slowfade {
-  from {opacity:0;}
-  to   {opacity:1;}
-}
-
-*.kf-slowfade {
-  animation:slowfade 1s;
-}
-
 /* Page setup -------------------------------------------------------------- */
 
 html {
-  --os2g-text:#eeeee0;
+  --os2g-text:#ccccc0;
   --os2g-bg:#222227;
   --os2g-bg2:#333338;
   --os2g-error:#cc4444;
   --os2g-link:#6677ee;
 
-  --os2g-font-family:sans-serif;
+  --os2g-font-family:Outfit, sans-serif;
 
-  font:12pt var(--os2g-font-family);
+  font:13pt var(--os2g-font-family);
   line-height:1.5;
   color:var(--os2g-text);
   background:var(--os2g-bg);
@@ -207,4 +142,82 @@ button {
 
 *.text-error {
   color:var(--os2g-error);
+}
+
+/* Animations -------------------------------------------------------------- */
+
+@keyframes fadein {
+  from {opacity:0;}
+  to   {opacity:1;}
+}
+
+*.kf-fadein {
+  animation:fadein 0.5s;
+}
+
+@keyframes fromleft {
+  from {opacity:0; left:-1rem;}
+  to   {opacity:1; left:0;}
+}
+
+*.kf-fromleft {
+  position:relative;
+  animation:fromleft 0.5s;
+}
+
+*.kf-fromleft-container > * {
+  position:relative;
+  animation:fromleft 0.5s;
+}
+
+@keyframes fromright {
+  from {opacity:0; right:-1rem;}
+  to   {opacity:1; right:0;}
+}
+
+*.kf-fromright {
+  position:relative;
+  animation:fromright 0.5s;
+}
+
+@keyframes fromtop {
+  from {opacity:0; top:-1rem;}
+  to   {opacity:1; top:0;}
+}
+
+*.kf-fromtop {
+  position:relative;
+  animation:fromtop 0.5s;
+}
+
+@keyframes frombottom {
+  from {opacity:0; bottom:-1rem;}
+  to   {opacity:1; bottom:0;}
+}
+
+*.kf-frombottom {
+  position:relative;
+  animation:frombottom 0.5s;
+}
+
+@keyframes slowfade {
+  from {opacity:0;}
+  to   {opacity:1;}
+}
+
+*.kf-slowfade {
+  animation:slowfade 1s;
+}
+
+/* Fonts ------------------------------------------------------------------- */
+
+@font-face {
+  font-family:Outfit;
+  src:url('./fonts/Outfit-Regular.ttf');
+}
+
+@font-face {
+  font-family:Outfit;
+  src:url('./fonts/Outfit-Bold.ttf');
+  font-weight:bold;
 }

@@ -15,7 +15,10 @@
   </head>
 
   <body class="kf-fadein" onload="document.getElementById('navform').submit()">
-    <iframe name="intercept" hidden="" onload="intercept(contentWindow)"></iframe>
+    <!-- Intercept *heavily* inspired by htmz by Lean Rada -->
+    <iframe name="intercept"
+            hidden=""
+            onload="document.querySelector(contentWindow.location.hash||null)?.replaceChildren(...contentWindow.document.body.childNodes)"></iframe>
 
     <header>
       <h1>
@@ -48,23 +51,5 @@
     <footer>
       <p>OS2G @ University of Nebraska-Lincoln</p>
     </footer>
-
-    <script>
-      /**
-       * Redirects the content of a webpage from the intercept iframe to an
-       * element in the main document.
-       * @param {HTMLIFrameElement} context The contentWindow of the intercept
-       * iframe.
-       */
-      function intercept(context) {
-        const destination = document.querySelector(context.location.hash);
-
-        if (destination === null) {
-          return;
-        }
-
-        destination.replaceChildren(...context.document.body.childNodes);
-      }
-    </script>
   </body>
 </html>

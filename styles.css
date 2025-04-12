@@ -152,7 +152,8 @@ button {
 }
 
 *.kf-fadein {
-  animation:fadein 0.5s;
+  opacity:0;
+  animation:fadein 0.5s forwards;
 }
 
 @keyframes fromleft {

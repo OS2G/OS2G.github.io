@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <title>OS2G</title>
-    <meta name="author" content="Operating Systems and Open Source Group" />
+    <meta name="author" content="Carston Wiebe" />
     <meta name="description" content="Club website for OS2G at the University of Nebraska-Lincoln" />
 
     <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8" />
@@ -14,28 +14,34 @@
     <base target="_blank" />
   </head>
 
-  <body>
+  <body class="kf-fadein" onload="document.getElementById('navform').submit()">
+    <iframe name="intercept" hidden="" onload="intercept(contentWindow)"></iframe>
+
     <header>
-      <h1>(OS)<sub>2</sub>G</h1>
+      <h1>
+        <span class="kf-fromleft">(</span><span class="kf-fromtop">OS</span><span class="kf-fromright">)</span><sub class="kf-frombottom">2</sub><span class="kf-slowfade">G</span>
+      </h1>
       <p>Operating Systems &amp; Open Source Group</p>
     </header>
 
     <nav>
-      <a target="_self" href="?p=about">
-        About Us
-      </a>
-      <a target="_self" href="?p=meetings">
-        Meetings
-      </a>
-      <a target="_self" href="?p=membership">
-        Membership
-      </a>
-      <a target="_self" href="?p=resources">
-        Resources
-      </a>
+      <form id="navform" target="intercept" action="./pages/about.html#main">
+        <button>
+          About Us
+        </button>
+        <button formaction="./pages/meetings.html#main">
+          Meetings
+        </button>
+        <button formaction="./pages/membership.html#main">
+          Membership
+        </button>
+        <button formaction="./pages/resources.html#main">
+          Resources
+        </button>
+      </form>
     </nav>
 
-    <main id="main">
+    <main id="main" class="kf-fromleft-container">
       <h2 class="text-error">ERROR : PAGE NOT FOUND</h2>
     </main>
 
@@ -44,25 +50,21 @@
     </footer>
 
     <script>
-      const page = new URLSearchParams(window.location.search)
-        .get('p') || 'about';
-      const xhr = new XMLHttpRequest();
+      /**
+       * Redirects the content of a webpage from the intercept iframe to an
+       * element in the main document.
+       * @param {HTMLIFrameElement} context The contentWindow of the intercept
+       * iframe.
+       */
+      function intercept(context) {
+        const destination = document.querySelector(context.location.hash);
 
-      xhr.onload = function () {
-        if (this.status === 200) {
-          document
-            .getElementById('main')
-            .innerHTML = this.responseText;
-          document
-            .title += ' | ' + page.toUpperCase();
-        } else {
-          console
-            .error('Page not found: ', page);
+        if (destination === null) {
+          return;
         }
+
+        destination.replaceChildren(...context.document.body.childNodes);
       }
-      xhr.responseType = 'text';
-      xhr.open('GET', `./pages/${page}.html`)
-      xhr.send();
     </script>
   </body>
 </html>

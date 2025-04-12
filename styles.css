@@ -13,11 +13,70 @@
   to   {opacity:1;}
 }
 
+*.kf-fadein {
+  animation:fadein 0.5s;
+}
+
+@keyframes fromleft {
+  from {opacity:0; left:-1rem;}
+  to   {opacity:1; left:0;}
+}
+
+*.kf-fromleft {
+  position:relative;
+  animation:fromleft 0.5s;
+}
+
+*.kf-fromleft-container > * {
+  position:relative;
+  animation:fromleft 0.5s;
+}
+
+@keyframes fromright {
+  from {opacity:0; right:-1rem;}
+  to   {opacity:1; right:0;}
+}
+
+*.kf-fromright {
+  position:relative;
+  animation:fromright 0.5s;
+}
+
+@keyframes fromtop {
+  from {opacity:0; top:-1rem;}
+  to   {opacity:1; top:0;}
+}
+
+*.kf-fromtop {
+  position:relative;
+  animation:fromtop 0.5s;
+}
+
+@keyframes frombottom {
+  from {opacity:0; bottom:-1rem;}
+  to   {opacity:1; bottom:0;}
+}
+
+*.kf-frombottom {
+  position:relative;
+  animation:frombottom 0.5s;
+}
+
+@keyframes slowfade {
+  from {opacity:0;}
+  to   {opacity:1;}
+}
+
+*.kf-slowfade {
+  animation:slowfade 1s;
+}
+
 /* Page setup -------------------------------------------------------------- */
 
 html {
   --os2g-text:#eeeee0;
   --os2g-bg:#222227;
+  --os2g-bg2:#333338;
   --os2g-error:#cc4444;
   --os2g-link:#6677ee;
 
@@ -34,6 +93,7 @@ html {
   html {
     --os2g-text:#1f271b;
     --os2g-bg:#f9eccc;
+    --os2g-bg2:#e8dbbb;
   }
 }
 
@@ -51,8 +111,6 @@ body {
     "main" 1fr
     "foot" min-content;
   / 1fr;
-
-  animation:fadein 0.5s;
 }
 
 header {
@@ -67,14 +125,24 @@ nav {
   text-align:center;
 }
 
-nav a {
+nav button {
+  border-radius:8px;
+  border:none;
+  background:none;
+
   color:var(--os2g-link);
-  text-decoration:none;
+  font:1.1rem var(--os2g-font-family);
+
+  padding:0.3rem;
 }
 
-nav a + a::before {
-  content:'∙';
+nav button:hover {
+  background:var(--os2g-bg2);
+}
+
+nav button:active {
   color:var(--os2g-text);
+  background:var(--os2g-link);
 }
 
 main {
@@ -98,14 +166,14 @@ footer {
   }
 
   nav {
-    text-align:left;
     border-left:2px solid var(--os2g-link);
     padding-left:1rem;
     margin-left:1rem;
   }
 
-  nav a + a::before {
-    content:none;
+  nav button {
+    display:block;
+    width:100%;
   }
 }
 
@@ -115,7 +183,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight:normal;
 }
 
-h1, h2, h3, h4, h5, h6, p, li, nav {
+h1, h2, h3, h4, h5, h6, p, li {
   margin-block:0.5rem;
 }
 
@@ -129,6 +197,10 @@ a {
 
 a:hover {
   color:var(--os2g-link);
+}
+
+button {
+  cursor:pointer;
 }
 
 /* Classes ----------------------------------------------------------------- */

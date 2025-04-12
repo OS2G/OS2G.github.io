@@ -1,18 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
     <title>OS2G</title>
     <meta name="author" content="Operating Systems and Open Source Group" />
-    <meta name="description" content="Club website for OS2G" />
+    <meta name="description" content="Club website for OS2G at the University of Nebraska-Lincoln" />
+
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="color-scheme" content="dark light" />
 
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <base target="_blank" />
   </head>
+
   <body>
-    <h1>Hello! Welcome to OS2G!</h1>
-    <em>Under construction</em>
+    <header>
+      <h1>(OS)<sub>2</sub>G</h1>
+      <p>Operating Systems &amp; Open Source Group</p>
+    </header>
+
+    <nav>
+      <a target="_self" href="?p=about">
+        About Us
+      </a>
+      <a target="_self" href="?p=meetings">
+        Meetings
+      </a>
+      <a target="_self" href="?p=membership">
+        Membership
+      </a>
+      <a target="_self" href="?p=resources">
+        Resources
+      </a>
+    </nav>
+
+    <main id="main">
+      <h2 class="text-error">ERROR : PAGE NOT FOUND</h2>
+    </main>
+
+    <footer>
+      <p>OS2G @ University of Nebraska-Lincoln</p>
+    </footer>
+
+    <script>
+      const page = new URLSearchParams(window.location.search)
+        .get('p') || 'about';
+      const xhr = new XMLHttpRequest();
+
+      xhr.onload = function () {
+        if (this.status === 200) {
+          document
+            .getElementById('main')
+            .innerHTML = this.responseText;
+          document
+            .title += ' | ' + page.toUpperCase();
+        } else {
+          console
+            .error('Page not found: ', page);
+        }
+      }
+      xhr.responseType = 'text';
+      xhr.open('GET', `./pages/${page}.html`)
+      xhr.send();
+    </script>
   </body>
 </html>

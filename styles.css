@@ -1,0 +1,138 @@
+/* CSS reset --------------------------------------------------------------- */
+
+* {
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+
+/* Animations -------------------------------------------------------------- */
+
+@keyframes fadein {
+  from {opacity:0;}
+  to   {opacity:1;}
+}
+
+/* Page setup -------------------------------------------------------------- */
+
+html {
+  --os2g-text:#eeeee0;
+  --os2g-bg:#222227;
+  --os2g-error:#cc4444;
+  --os2g-link:#6677ee;
+
+  --os2g-font-family:sans-serif;
+
+  font:12pt var(--os2g-font-family);
+  line-height:1.5;
+  color:var(--os2g-text);
+  background:var(--os2g-bg);
+  hyphens:auto;
+}
+
+@media (prefers-color-scheme:light) {
+  html {
+    --os2g-text:#1f271b;
+    --os2g-bg:#f9eccc;
+  }
+}
+
+body {
+  padding:1rem;
+  margin:auto;
+
+  max-width:50rem;
+  min-height:100vh;
+
+  display:grid;
+  grid-template:
+    "nav" min-content
+    "head" min-content
+    "main" 1fr
+    "foot" min-content;
+  / 1fr;
+
+  animation:fadein 0.5s;
+}
+
+header {
+  grid-area:head;
+
+  text-align:center;
+}
+
+nav {
+  grid-area:nav;
+
+  text-align:center;
+}
+
+nav a {
+  color:var(--os2g-link);
+  text-decoration:none;
+}
+
+nav a + a::before {
+  content:'∙';
+  color:var(--os2g-text);
+}
+
+main {
+  grid-area:main;
+}
+
+footer {
+  grid-area:foot;
+
+  text-align:center;
+  font-size:0.8rem;
+}
+
+@media (width > 50rem) {
+  body {
+    grid-template:
+      "head head" min-content
+      "main nav" 1fr
+      "foot foot" min-content
+    / 1fr min-content;
+  }
+
+  nav {
+    text-align:left;
+    border-left:2px solid var(--os2g-link);
+    padding-left:1rem;
+    margin-left:1rem;
+  }
+
+  nav a + a::before {
+    content:none;
+  }
+}
+
+/* Element formatting ------------------------------------------------------ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight:normal;
+}
+
+h1, h2, h3, h4, h5, h6, p, li, nav {
+  margin-block:0.5rem;
+}
+
+a {
+  color:var(--os2g-text);
+  text-decoration:underline 2px solid var(--os2g-link);
+  transition:color 0.2s;
+
+  white-space:nowrap;
+}
+
+a:hover {
+  color:var(--os2g-link);
+}
+
+/* Classes ----------------------------------------------------------------- */
+
+*.text-error {
+  color:var(--os2g-error);
+}

@@ -44,7 +44,7 @@ body {
     "nav" min-content
     "head" min-content
     "main" 1fr
-    "foot" min-content;
+    "foot" min-content
   / 1fr;
 }
 

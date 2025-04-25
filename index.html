@@ -15,10 +15,8 @@
   </head>
 
   <body class="kf-fadein" onload="document.getElementById('navform').submit()">
-    <!-- Intercept *heavily* inspired by htmz by Lean Rada -->
-    <iframe name="intercept"
-            hidden=""
-            onload="document.querySelector(contentWindow.location.hash||null)?.replaceChildren(...contentWindow.document.body.childNodes)"></iframe>
+    <!-- htmz by Lean Rada -->
+    <iframe name="intercept" hidden="" onload="setTimeout(()=>document.querySelector(contentWindow.location.hash||null)?.replaceChildren(...contentWindow.document.body.childNodes))"></iframe>
 
     <header>
       <h1>

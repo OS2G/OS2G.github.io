@@ -124,7 +124,7 @@ h1, h2, h3, h4, h5, h6, p, li {
 
 a {
   color:var(--os2g-text);
-  text-decoration:underline 2px solid var(--os2g-link);
+  text-decoration:underline 0.1rem solid var(--os2g-link);
   transition:color 0.2s;
 
   white-space:nowrap;
@@ -136,6 +136,18 @@ a:hover {
 
 button {
   cursor:pointer;
+}
+
+li {
+  margin-left:2ch;
+}
+
+ul {
+  list-style-type:'- ';
+}
+
+section + section {
+  margin-top:2rem;
 }
 
 /* Classes ----------------------------------------------------------------- */

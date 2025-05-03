@@ -18,6 +18,7 @@
     <meta name="apple-mobile-web-app-title" content="OS2G" />
     <link rel="manifest" href="./site.webmanifest" />
 
+    <!-- Applies to every anchor tag by default -->
     <base target="_blank" rel="noreferrer noopener" />
   </head>
 
@@ -46,7 +47,15 @@
       </form>
     </nav>
 
-    <main id="main" class="kf-fromleft-container"></main>
+    <main id="main" class="kf-fromleft-container">
+      <noscript>
+        <h2 class="text-error">ERROR : Scripts Not Enabled</h2>
+        <p>
+          This site requires javascript to function — if you wish to continue,
+          please enable it!
+        </p>
+      </noscript>
+    </main>
 
     <footer>
       <p>OS2G @ University of Nebraska-Lincoln</p>

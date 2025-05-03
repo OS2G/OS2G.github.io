@@ -18,6 +18,6 @@ HTML, CSS, and javascript.
   selectors.
 - Inline javascript function calls and `onevent="function()"` HTML attributes
   are encouraged.
-- CSS classes that apply keyframe animations to an element should be prefixed
-  with `kf-`, and classes that apply animations to elements *within* an element
-  should be prefixed with `kf-container-`.
+- CSS classes that apply keyframe animations to an element should be named in
+  the format `kf-ANIMATION_NAME`, and classes that apply animations to elements
+  *within* an element should be in the format `kf-ANIMATION_NAME-container`.

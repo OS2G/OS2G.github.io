@@ -20,4 +20,4 @@ HTML, CSS, and javascript.
   are encouraged.
 - CSS classes that apply keyframe animations to an element should be named in
   the format `kf-ANIMATION_NAME`, and classes that apply animations to elements
-  *within* an element should be in the format `kf-ANIMATION_NAME-container`.
+  *within* themselves should be in the format `kf-ANIMATION_NAME-container`.

@@ -260,6 +260,7 @@ ul.profile-linktree li + li::before {
 @media (width > 50rem) {
   ul.profile-linktree::before {
     display: block;
+    margin-top:0.5rem;
   }
 
   ul.profile-linktree li {

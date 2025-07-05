@@ -1,94 +1,89 @@
 /* CSS reset --------------------------------------------------------------- */
 
 * {
-  padding:0;
-  margin:0;
-  box-sizing:border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /* Page setup -------------------------------------------------------------- */
 
 html {
-  --os2g-text:#cccccc;
-  --os2g-bg:#222222;
-  --os2g-bg2:#333333;
-  --os2g-error:#cc4444;
-  --os2g-link:#6677ee;
+  --os2g-text: light-dark(#2f372b, #cccccc);
+  --os2g-faded-text: light-dark(#888899, #888899);
+  --os2g-bg: light-dark(#f9eccc, #222222);
+  --os2g-bg2: light-dark(#e8dbbb, #333333);
+  --os2g-error: light-dark(#cc4444, #cc4444);
+  --os2g-highlight: light-dark(#6677ee, #6677ee);
 
-  --os2g-font-family:Outfit, sans-serif;
+  --os2g-font-family: Outfit, sans-serif;
+  --os2g-rule-width: 2px;
 
-  font:13pt var(--os2g-font-family);
-  line-height:1.5;
-  color:var(--os2g-text);
-  background:var(--os2g-bg);
-  hyphens:auto;
-}
-
-@media (prefers-color-scheme:light) {
-  html {
-    --os2g-text:#1f271b;
-    --os2g-bg:#f9eccc;
-    --os2g-bg2:#e8dbbb;
-  }
+  font: 13pt var(--os2g-font-family);
+  line-height: 1.5;
+  color: var(--os2g-text);
+  background: var(--os2g-bg);
+  hyphens: auto;
 }
 
 body {
-  padding:1rem;
-  margin:auto;
+  padding: 1rem;
+  margin: auto;
 
-  max-width:50rem;
-  min-height:100vh;
+  max-width: 50rem;
+  min-height: 100vh;
 
-  display:grid;
+  display: grid;
   grid-template:
     "nav" min-content
     "head" min-content
     "main" 1fr
     "foot" min-content
-  / 1fr;
+    / 1fr;
 }
 
 header {
-  grid-area:head;
+  grid-area: head;
 
-  text-align:center;
+  text-align: center;
 }
 
 nav {
-  grid-area:nav;
+  grid-area: nav;
 
-  text-align:center;
+  text-align: center;
 }
 
 nav button {
-  border-radius:8px;
-  border:none;
-  background:none;
+  border-radius: 8px;
+  border: none;
+  background: none;
 
-  color:var(--os2g-link);
-  font:1.1rem var(--os2g-font-family);
+  color: var(--os2g-highlight);
+  font: 1.1rem var(--os2g-font-family);
 
-  padding:0.3rem;
+  padding: 0.3rem;
 }
 
 nav button:hover {
-  background:var(--os2g-bg2);
+  background: var(--os2g-bg2);
 }
 
 nav button:active {
-  color:var(--os2g-text);
-  background:var(--os2g-link);
+  color: var(--os2g-text);
+  background: var(--os2g-highlight);
 }
 
 main {
-  grid-area:main;
+  grid-area: main;
 }
 
 footer {
-  grid-area:foot;
+  grid-area: foot;
 
-  text-align:center;
-  font-size:0.8rem;
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 4rem;
 }
 
 @media (width > 50rem) {
@@ -97,140 +92,293 @@ footer {
       "head head" min-content
       "main nav" 1fr
       "foot foot" min-content
-    / 1fr min-content;
+      / 1fr min-content;
   }
 
   nav {
-    border-left:2px solid var(--os2g-link);
-    padding-left:1rem;
-    margin-left:1rem;
+    border-left: var(--os2g-rule-width) solid var(--os2g-highlight);
+    padding-left: 1rem;
+    margin-left: 1rem;
   }
 
   nav button {
-    display:block;
-    width:100%;
+    display: block;
+    width: 100%;
   }
 }
 
 /* Element formatting ------------------------------------------------------ */
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight:normal;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  line-height: 1.2;
 }
 
-h1, h2, h3, h4, h5, h6, p, li {
-  margin-block:0.5rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+  margin-block: 0.5rem;
 }
 
 a {
-  color:var(--os2g-text);
-  text-decoration:underline 0.1rem solid var(--os2g-link);
-  transition:color 0.2s;
+  color: var(--os2g-text);
+  text-decoration: underline 0.1rem solid var(--os2g-highlight);
+  transition: color 0.2s;
 
-  white-space:nowrap;
+  white-space: nowrap;
 }
 
 a:hover {
-  color:var(--os2g-link);
+  color: var(--os2g-highlight);
 }
 
 button {
-  cursor:pointer;
+  cursor: pointer;
 }
 
-li {
-  margin-left:2ch;
+ul,
+ol {
+  margin-left: 2ch;
 }
 
 ul {
-  list-style-type:'- ';
+  list-style-type: " - ";
+}
+
+ul.inline {
+  margin: 0;
+}
+
+ul.inline li {
+  display: block;
+  margin: 0;
+}
+
+ul.inline li::before {
+  content: " | ";
+  color: var(--os2g-highlight);
+}
+
+@media (width > 50rem) {
+  ul.inline li {
+    display: inline;
+  }
+
+  ul.inline li:first-child::before {
+    content: none;
+  }
 }
 
 section + section {
-  margin-top:2rem;
+  margin-top: 2rem;
 }
 
 /* Classes ----------------------------------------------------------------- */
 
 *.text-error {
-  color:var(--os2g-error);
+  color: var(--os2g-error);
+}
+
+/* Profile ----------------------------------------------------------------- */
+
+section.profile {
+  display: grid;
+  column-gap: 1rem;
+  align-items: start;
+  max-width: 30rem;
+  margin-inline: auto;
+  grid-template:
+    "name  img" min-content
+    "meta  img" 1fr
+    "bio   bio" min-content
+    "links links" min-content
+    / 1fr 150px;
+
+  @media (width > 50rem) {
+    max-width: 100%;
+    padding:1rem;
+    grid-template:
+      "name img" min-content
+      "meta img" min-content
+      "bio  img" 1fr
+      "bio  links" min-content
+      / 1fr 150px;
+  }
+}
+
+h3.profile-name {
+  grid-area: name;
+  margin-bottom: 0;
+}
+
+section.alumni h3.profile-name::after {
+  content: " Alumni";
+  color: var(--os2g-faded-text);
+}
+
+ul.profile-meta {
+  grid-area: meta;
+}
+
+img.profile-pic {
+  grid-area: img;
+  border-radius: 1rem;
+}
+
+p.profile-bio {
+  grid-area: bio;
+}
+
+ul.profile-linktree {
+  grid-area: links;
+  margin: 0;
+}
+
+ul.profile-linktree::before {
+  content: "Links: ";
+}
+
+ul.profile-linktree li {
+  margin: 0;
+  display: inline;
+}
+
+ul.profile-linktree li + li::before {
+  content: " & ";
+}
+
+@media (width > 50rem) {
+  ul.profile-linktree::before {
+    display: block;
+  }
+
+  ul.profile-linktree li {
+    display: block;
+  }
+
+  ul.profile-linktree li::before,
+  ul.profile-linktree li + li::before {
+    content: " - ";
+  }
 }
 
 /* Animations -------------------------------------------------------------- */
 
 @keyframes fadein {
-  from {opacity:0;}
-  to   {opacity:1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 *.kf-fadein {
-  opacity:0;
-  animation:fadein 0.5s forwards;
+  opacity: 0;
+  animation: fadein 0.5s forwards;
 }
 
 @keyframes fromleft {
-  from {opacity:0; left:-1rem;}
-  to   {opacity:1; left:0;}
+  from {
+    opacity: 0;
+    left: -1rem;
+  }
+  to {
+    opacity: 1;
+    left: 0;
+  }
 }
 
 *.kf-fromleft {
-  position:relative;
-  animation:fromleft 0.5s;
+  position: relative;
+  animation: fromleft 0.5s;
 }
 
 *.kf-fromleft-container > * {
-  position:relative;
-  animation:fromleft 0.5s;
+  position: relative;
+  animation: fromleft 0.5s;
 }
 
 @keyframes fromright {
-  from {opacity:0; right:-1rem;}
-  to   {opacity:1; right:0;}
+  from {
+    opacity: 0;
+    right: -1rem;
+  }
+  to {
+    opacity: 1;
+    right: 0;
+  }
 }
 
 *.kf-fromright {
-  position:relative;
-  animation:fromright 0.5s;
+  position: relative;
+  animation: fromright 0.5s;
 }
 
 @keyframes fromtop {
-  from {opacity:0; top:-1rem;}
-  to   {opacity:1; top:0;}
+  from {
+    opacity: 0;
+    top: -1rem;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
 }
 
 *.kf-fromtop {
-  position:relative;
-  animation:fromtop 0.5s;
+  position: relative;
+  animation: fromtop 0.5s;
 }
 
 @keyframes frombottom {
-  from {opacity:0; bottom:-1rem;}
-  to   {opacity:1; bottom:0;}
+  from {
+    opacity: 0;
+    bottom: -1rem;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
 }
 
 *.kf-frombottom {
-  position:relative;
-  animation:frombottom 0.5s;
+  position: relative;
+  animation: frombottom 0.5s;
 }
 
 @keyframes slowfade {
-  from {opacity:0;}
-  to   {opacity:1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 *.kf-slowfade {
-  animation:slowfade 1s;
+  animation: slowfade 1s;
 }
 
 /* Fonts ------------------------------------------------------------------- */
 
 @font-face {
-  font-family:Outfit;
-  src:url('./fonts/Outfit-Regular.ttf');
+  font-family: Outfit;
+  src: url("./fonts/Outfit-Regular.ttf");
 }
 
 @font-face {
-  font-family:Outfit;
-  src:url('./fonts/Outfit-Bold.ttf');
-  font-weight:bold;
+  font-family: Outfit;
+  src: url("./fonts/Outfit-Bold.ttf");
+  font-weight: bold;
 }

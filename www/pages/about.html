@@ -23,10 +23,7 @@
     <link rel="manifest" href="./site.webmanifest" />
   </head>
 
-  <body class="kf-fadein" onload="document.getElementById('navform').submit()">
-    <!-- htmz by Lean Rada -->
-    <iframe name="intercept" hidden="" onload="setTimeout(()=>document.querySelector(contentWindow.location.hash||null)?.replaceChildren(...contentWindow.document.body.childNodes))"></iframe>
-
+  <body class="kf-fadein">
     <header>
       <h1>
         <span class="kf-fromleft">(</span><span class="kf-fromtop">OS</span><span class="kf-fromright">)</span><sub class="kf-frombottom">2</sub><span class="kf-slowfade">G</span>
@@ -46,19 +43,22 @@
           Resources
         </button>
         <button formaction="./pages/members.html#main">
-            Members
+          Members
         </button>
       </form>
     </nav>
 
-    <main id="main" class="kf-fromleft-container">
-      <noscript>
-        <h2 class="text-error">ERROR : Scripts Not Enabled</h2>
-        <p>
-          This site requires javascript to function — if you wish to continue,
-          please enable it!
-        </p>
-      </noscript>
+    <main class="kf-fromleft-container">
+      <h2>About Us</h2>
+<p>
+  The UNL Operating Systems &amp; Open-Source Group (OS2G) is a club for users of
+  Linux and other Free and Open-Source Software (FOSS) to meet, socialize, and
+  learn from one another. We also host events to introduce new members to the
+  world of FOSS and enhance their computer literacy. We cover a wide range of
+  topics including server administration, data science, cybersecurity, computer
+  hardware, and programming languages.
+</p>
+
     </main>
 
     <footer>

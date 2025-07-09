@@ -1,4 +1,4 @@
-import { tag, attr } from './tag.js'
+import { tag, attr } from '/modules/tag.js'
 
 // Shortcut functions
 const li = (...x) => tag('li', ...x)

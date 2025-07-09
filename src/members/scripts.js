@@ -1,4 +1,4 @@
-import Profile from "../modules/Profile.js"
+import Profile from "/modules/Profile.js"
 
 /**
  * Loads member data.
@@ -22,7 +22,7 @@ const loadMembers = async (href) => {
 
 const main = async () => {
     document.getElementById('members')
-        ?.replaceChildren(...await loadMembers('../data/members.json'))
+        ?.replaceChildren(...await loadMembers('/data/members.json'))
 }
 
 if (document.readyState === 'loading') {

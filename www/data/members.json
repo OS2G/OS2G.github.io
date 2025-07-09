@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Carston Wiebe",
+        "major": "Computer Engineering",
+        "bio": "Interested in computer hardware, web development, languages (for programs or for humans), fiction books, video games, and occasionally art.",
+        "role": "Primary Programmer",
+        "joined": "2023",
+        "isAlumni": false,
+        "imgPath": "/images/carston-wiebe-pfp-500x500.jpg",
+        "links": [
+            {
+                "name": "Email",
+                "href": "mailto:carstonwiebe17@gmail.com"
+            },
+            {
+                "name": "Résumé",
+                "href": "https://carstonwiebe17.github.io"
+            }
+        ]
+    },
+    {
+        "name": "Bobby Tables",
+        "major": "Cybersecurity",
+        "bio": "Put me in your databases.",
+        "joined": "2007",
+        "isAlumni": true,
+        "imgPath": "/images/Little_Bobby_Tables-569x569.PNG",
+        "links": [
+            {
+                "name": "xkcd",
+                "href": "https://xkcd.com/327/"
+            }
+        ]
+    },
+    {
+        "name": "John Doe",
+        "major": "Sociology",
+        "bio": "Incidunt omnis ut et deleniti praesentium. Iste rerum ipsa sed corrupti iure assumenda. Id vel praesentium qui dolorum.",
+        "joined": "2025",
+        "role": "Evil Vizier",
+        "links": [
+            {
+                "name": "LinkedIn",
+                "href": "https://www.spidersge.org/"
+            },
+            {
+                "name": "Bluesky",
+                "href": "https://www.spidersge.org/"
+            },
+            {
+                "name": "Github",
+                "href": "https://www.spidersge.org/"
+            }
+        ]
+    }
+]

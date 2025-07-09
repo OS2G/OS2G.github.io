@@ -44,13 +44,11 @@ body {
 
 header {
   grid-area: head;
-
   text-align: center;
 }
 
 nav {
   grid-area: nav;
-
   text-align: center;
 }
 
@@ -99,6 +97,11 @@ footer {
     border-left: var(--os2g-rule-width) solid var(--os2g-highlight);
     padding-left: 1rem;
     margin-left: 1rem;
+  }
+
+  nav form {
+    position: sticky;
+    top: 1rem;
   }
 
   nav button {
@@ -206,7 +209,7 @@ section.profile {
 
   @media (width > 50rem) {
     max-width: 100%;
-    padding:1rem;
+    padding: 1rem;
     grid-template:
       "name img" min-content
       "meta img" min-content
@@ -260,7 +263,7 @@ ul.profile-linktree li + li::before {
 @media (width > 50rem) {
   ul.profile-linktree::before {
     display: block;
-    margin-top:0.5rem;
+    margin-top: 0.5rem;
   }
 
   ul.profile-linktree li {

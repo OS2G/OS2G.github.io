@@ -1,26 +1,31 @@
 # OS2G.github.io
 
 Club website for the Operating Systems & Open-Source Group at the University of
-Nebraska-Lincoln.  The site is a pseudo-single page site written in vanilla
-HTML, CSS, and javascript.
-
-## Dependencies
-
-- [htmz](https://leanrada.com/htmz/)...?  It is a single-line of HTML that
-  implementes a fraction of [htmx](https://htmx.org), but it has a few tricks
-  up it's sleeve.
+Nebraska-Lincoln.  The site is written in vanilla HTML, CSS, and javascript,
+and is accompanied by a simple SSG written in Python.
 
 ## File Structure
 
-- The main layout and the `head` tag are located in `./index.html`, while all
-  page content is found in the `./pages` directory.  Pages are loaded via htmz.
-- Page-specific javascript (e.g. `main` functions) should be in `./pages` and
-  should be named after their owners, e.g. `./pages/members.html` and
-  `./pages/members.html.js`.
-- Reusable javascript (modules) are in the `./modules` directory.
-- All styles are in `./styles.css`.
-- The directories `./images` and `./fonts` contain, well, images and fonts.
-- The `./data` directory contains additional resources, such as JSON files.
+- The layout is found in `./layout.html`, and contains the `<head/>` tag along
+  with any headers, footers, or navigation bars.  The page content will be
+  inserted into the template in the place of the string `##CONTENTS##`.
+- The un-transformed site can be found in the `./src` directory.  When the SSG
+  runs, this directory is copied wholesale into the destination directory with
+  every HTML file inserted into the layout.
+  - Reusable javascript (modules) are in the `./src/modules` directory.
+  - All styles are in `./src/styles.css`.
+  - The directories `./src/images` and `./src/fonts` contain, well, images and
+    fonts.
+  - The `./src/data` directory contains additional resources, such as JSON
+    files.
+  - `./src/index.html` contains the home page.
+  - `./src/404.html` contains the error page.
+  - Subpages can be found in their own directories with there own `index.html`
+    files — this is for prettier URLs.
+- The destination directory is `./www/`.  This is the directory published to
+  Github Pages.
+- The SSG program can be found in `./ssg.py`.  It can be ran with
+  `python3 ./ssg.py`.
 
 ## Conventions
 

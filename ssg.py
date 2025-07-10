@@ -25,7 +25,7 @@ if __name__ == "__main__":
         output_dir_path.mkdir()
 
     layout = layout_path.read_text(encoding="utf-8")
-    
+
     def copy_dir_and_process_html(dir_path, dest_dir_path):
         """
         Copies the contents of the directory at dir_path into the directory at
@@ -34,7 +34,7 @@ if __name__ == "__main__":
         """
         for path in dir_path.iterdir():
             dest_path = dest_dir_path / path.name
-            
+
             if path.is_dir():
                 if dest_path.is_file():
                     print(f"ERROR : naming conflict: {dest_path}")
@@ -51,6 +51,6 @@ if __name__ == "__main__":
                 else:
                     # shutil does *really* fast copy operations
                     shutil.copy(f"{path}", f"{dest_path}")
-                
+
     copy_dir_and_process_html(src_dir_path, output_dir_path)
     sys.exit(0)

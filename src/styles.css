@@ -45,6 +45,7 @@ body {
 header {
   grid-area: head;
   text-align: center;
+  margin-block: 2rem;
 }
 
 nav {

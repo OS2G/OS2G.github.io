@@ -148,6 +148,22 @@ a:hover {
 
 button {
   cursor: pointer;
+  padding: 0.25rem;
+  border: var(--os2g-rule-width) solid var(--os2g-highlight);
+  border-radius: 0.5rem;
+  color: var(--os2g-text);
+  background: none;
+  font: 0.9rem / 1.2 var(--os2g-font-family);
+}
+
+button:hover {
+  background: var(--os2g-bg2);
+}
+
+button:active {
+  background: var(--os2g-highlight);
+  border-color: var(--os2g-bg);
+  color: var(--os2g-bg);
 }
 
 ul,
@@ -185,6 +201,30 @@ ul.inline li::before {
 
 section + section {
   margin-top: 2rem;
+}
+
+input[type="text"],
+textarea,
+label {
+  display: block;
+}
+
+input[type="text"],
+textarea {
+  padding: 0.5rem;
+  font: 0.9rem / 1.2 var(--os2g-font-family);
+  border: var(--os2g-rule-width) solid var(--os2g-faded-text);
+  color: var(--os2g-text);
+  background: none;
+  border-radius: 0.5rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="checkbox"] {
+  margin: 0.5rem;
 }
 
 /* Classes ----------------------------------------------------------------- */
@@ -248,7 +288,7 @@ ul.profile-linktree {
   margin: 0;
 }
 
-ul.profile-linktree::before {
+ul.profile-linktree:not(:empty)::before {
   content: "Links: ";
 }
 
@@ -275,6 +315,117 @@ ul.profile-linktree li + li::before {
   ul.profile-linktree li + li::before {
     content: " - ";
   }
+}
+
+/* Profile Form ------------------------------------------------------------ */
+
+form.profile-form {
+  display: grid;
+  gap: 1rem;
+
+  grid-template:
+    "name name" min-content
+    "major major" min-content
+    "bio bio" min-content
+    "links links" min-content
+    "role role" min-content
+    "joined joined" min-content
+    "imgpath imgpath" min-content
+    "isalumni isalumni" min-content
+    "copy download" min-content
+    "profile profile" min-content
+    / 1fr 1fr;
+
+  @media (width > 50rem) {
+    grid-template:
+      "name role" min-content
+      "major joined" min-content
+      "bio bio" min-content
+      "links imgpath" min-content
+      "links isalumni" 1fr
+      "copy download" min-content
+      "profile profile" min-content
+      / 1fr 1fr;
+  }
+}
+
+*[name="name"] {
+  grid-area: name;
+}
+
+*[name="major"] {
+  grid-area: major;
+}
+
+*[name="bio"] {
+  grid-area: bio;
+}
+
+*[name="role"] {
+  grid-area: role;
+}
+
+*[name="joined"] {
+  grid-area: joined;
+}
+
+label.for-alumni {
+  grid-area: isalumni;
+}
+
+*[name="img-path"] {
+  grid-area: imgpath;
+}
+
+*[name="profile"] {
+  grid-area: profile;
+}
+
+button.profile-form-copy {
+  grid-area: copy;
+}
+
+button.profile-form-download {
+  grid-area: download;
+}
+
+ul.profile-form-links {
+  grid-area: links;
+  position: relative;
+  margin-left: 0;
+}
+
+ul.profile-form-links::before {
+  content: "Links: ";
+}
+
+ul.profile-form-links li {
+  display: grid;
+  gap: 0.5rem;
+
+  grid-template:
+    "linkhref" min-content
+    "linktext" min-content
+    "removelink" min-content
+    / 1fr;
+}
+
+button.add-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+*[name="link-text"] {
+  grid-area: linktext;
+}
+
+*[name="link-href"] {
+  grid-area: linkhref;
+}
+
+button.remove-link {
+  grid-area: removelink;
 }
 
 /* Animations -------------------------------------------------------------- */

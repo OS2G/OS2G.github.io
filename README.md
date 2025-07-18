@@ -4,6 +4,25 @@ Club website for the Operating Systems & Open-Source Group at the University of
 Nebraska-Lincoln.  The site is written in vanilla HTML, CSS, and javascript,
 and is accompanied by a simple SSG written in Python.
 
+## Dev Dependencies
+
+There are no runtime dependencies, but some tools are recommended or required
+for development of the site.
+
+### Required
+
+- [python3](https://www.python.org/) is needed to run the SSG script, and can
+  also be used to serve the site locally.
+
+### Recommended
+
+- [just](https://github.com/casey/just) is used to create project-level
+  aliases for common actions like "build", "serve", or "watch".  Otherwise,
+  you can view the scripts directly in the `./justfile`.
+- [watchexec](https://github.com/watchexec/watchexec) is used to watch a
+  directory for changes, and then runs a given command when it detects them.
+  Useful to automatically run the SSG when you make a change to the source.
+
 ## File Structure
 
 - The layout is found in `./layout.html`, and contains the `<head/>` tag along
@@ -35,7 +54,7 @@ and is accompanied by a simple SSG written in Python.
 
 ## Profiles
 
-Member profiles are defined in `./data/members.json`, and have the following
+Member profiles are defined in `./src/data/members.json`, and have the following
 fields (all optional):
 
 `name`

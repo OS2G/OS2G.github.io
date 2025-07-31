@@ -1,26 +1,31 @@
 """
 Simple SSG for the UNL OS2G website.
 """
-
+from enum import Enum
 from pathlib import Path
 import shutil
 import sys
+
+class ErrorCode(Enum):
+    NO_LAYOUT = 1
+    NO_SRC = 2
+    OUTPUT_DIR_IS_FILE = 3
 
 if __name__ == "__main__":
     layout_path = Path("./layout.html")
     if not layout_path.is_file():
         print("ERROR : layout.html is not a file")
-        sys.exit(1)
+        sys.exit(ErrorCode.NO_LAYOUT)
 
     src_dir_path = Path("./src")
     if not src_dir_path.is_dir():
         print("ERROR : src is not a directory")
-        sys.exit(2)
+        sys.exit(ErrorCode.NO_SRC)
 
     output_dir_path = Path("./www")
     if output_dir_path.is_file():
         print("ERROR : www is a file, not a directory")
-        sys.exit(3)
+        sys.exit(ErrorCode.OUTPUT_DIR_IS_FILE)
     if not output_dir_path.is_dir():
         output_dir_path.mkdir()
 

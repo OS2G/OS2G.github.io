@@ -28,6 +28,11 @@ const Button = (name, hint, callback) => tag('button',
     hint,
 )
 
+/**
+ * Creates a link input that allows entry of a URL and a display name, and has
+ * a button to delete the entry.
+ * @returns {HTMLElement} A list item containing form fields.
+ */
 const LinkRow = () => {
     const This = tag('li',
         TextInput('link-href', 'Link URL'),
@@ -44,7 +49,7 @@ export default function() {
     const BioInput = TextAreaInput('bio', 'A little about you')
     const RoleInput = TextInput('role', 'Your role at OS2G')
     const JoinedInput = TextInput('joined', 'The year you joined')
-    const ImgPathInput = TextInput('img-path', 'Filename of your profile pic')
+    const ImgPathInput = TextInput('img-path', 'URL of your profile pic')
     const IsAlumniInput = CheckboxInput('is-alumni', 'Have you graduated?')
     const Links = tag('ul',
         attr('class', 'profile-form-links'),
@@ -62,7 +67,7 @@ export default function() {
                         name: Li.querySelector('[name="link-text"]')?.value,
                         href: Li.querySelector('[name="link-href"]')?.value,
                     })),
-        imgPath: ImgPathInput.value ? '/images/' + ImgPathInput.value : null,
+        imgPath: ImgPathInput.value,
         isAlumni: IsAlumniInput.checked,
     })
 

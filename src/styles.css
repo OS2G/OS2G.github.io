@@ -135,15 +135,14 @@ li {
 }
 
 a {
-  color: var(--os2g-text);
-  text-decoration: underline 0.1rem solid var(--os2g-highlight);
-  transition: color 0.2s;
+  color: var(--os2g-highlight);
+  text-decoration: none;
 
   white-space: nowrap;
 }
 
 a:hover {
-  color: var(--os2g-highlight);
+  text-decoration: underline 0.1rem solid var(--os2g-highlight);
 }
 
 button {

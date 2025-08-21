@@ -9,12 +9,20 @@
         "imgPath": "/images/carston-wiebe-pfp-500x500.jpg",
         "links": [
             {
+                "name": "Website",
+                "href": "https://ctwiebe23.github.io"
+            },
+            {
                 "name": "Email",
                 "href": "mailto:carstonwiebe17@gmail.com"
             },
             {
                 "name": "Résumé",
                 "href": "https://carstonwiebe17.github.io"
+            },
+            {
+                "name": "LinkedIn",
+                "href": "https://www.linkedin.com/in/carston-wiebe/"
             }
         ]
     },

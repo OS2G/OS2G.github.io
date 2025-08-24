@@ -60,40 +60,5 @@
                 "href": "https://constancies.bandcamp.com"
             }
         ]
-    },
-    {
-        "name": "Bobby Tables",
-        "major": "Cybersecurity",
-        "bio": "Put me in your databases.",
-        "joined": "2007",
-        "isAlumni": true,
-        "imgPath": "/images/Little_Bobby_Tables-569x569.PNG",
-        "links": [
-            {
-                "name": "xkcd",
-                "href": "https://xkcd.com/327/"
-            }
-        ]
-    },
-    {
-        "name": "John Doe",
-        "major": "Sociology",
-        "bio": "Incidunt omnis ut et deleniti praesentium. Iste rerum ipsa sed corrupti iure assumenda. Id vel praesentium qui dolorum.",
-        "joined": "2025",
-        "role": "Evil Vizier",
-        "links": [
-            {
-                "name": "LinkedIn",
-                "href": "https://www.spidersge.org/"
-            },
-            {
-                "name": "Bluesky",
-                "href": "https://www.spidersge.org/"
-            },
-            {
-                "name": "Github",
-                "href": "https://www.spidersge.org/"
-            }
-        ]
     }
 ]

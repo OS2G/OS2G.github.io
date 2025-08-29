@@ -226,6 +226,21 @@ input[type="checkbox"] {
   margin: 0.5rem;
 }
 
+dl {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  row-gap: 0.75rem;
+  column-gap: 1rem;
+}
+
+dt {
+  white-space:nowrap;
+}
+
+dt::after {
+  content: ": ";
+}
+
 /* Classes ----------------------------------------------------------------- */
 
 *.text-error {

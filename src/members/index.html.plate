@@ -1,0 +1,28 @@
+<h2>Members</h2>
+##profiles{{
+<section class="##[isAlumni]{{profile alumni}}{{profile}}">
+  <h3 class="profile-name">##name##</h3>
+  ##[imgPath]{{
+  <img class="profile-pic"
+       src="##imgPath##"
+       alt="Profile image for ##name##"
+       title="Profile image for ##name##"
+       width="150"
+       height="150"
+       />
+  }}
+  <ul class="inline profile-meta">
+    ##[major]{{<li>##major##</li>}}
+    ##[joined]{{<li>Joined ##joined##</li>}}
+    ##[role]{{<li>##role##</li>}}
+  </ul>
+  <p class="profile-bio">##bio##</p>
+  ##[links]{{
+  <ul class="profile-linktree">
+    ##links{{
+    <li><a href="##href##" title="##href##">##name##</a></li>
+    }}
+  </ul>
+  }}
+</section>
+}}

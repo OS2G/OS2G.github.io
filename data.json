@@ -1,0 +1,66 @@
+{
+    "profiles": [
+        {
+            "name": "Carston Wiebe",
+            "major": "Computer Engineering",
+            "bio": "Interested in computer hardware, web development, languages (for programs or for humans), fiction books, video games, and occasionally art.",
+            "role": "Primary Programmer",
+            "joined": "2023",
+            "isAlumni": false,
+            "imgPath": "/images/carston-wiebe-pfp-500x500.jpg",
+            "links": [
+                {
+                    "name": "Website",
+                    "href": "https://ctwiebe23.github.io"
+                },
+                {
+                    "name": "Email",
+                    "href": "mailto:carstonwiebe17@gmail.com"
+                },
+                {
+                    "name": "Résumé",
+                    "href": "https://carstonwiebe17.github.io"
+                },
+                {
+                    "name": "LinkedIn",
+                    "href": "https://www.linkedin.com/in/carston-wiebe/"
+                }
+            ]
+        },
+        {
+            "name": "Alexander Sanderson",
+            "major": "Computer Science",
+            "bio": "I'm a Linux enthusiast, programmer, metal musician and guitarist, and poet.",
+            "role": "New contributor / freeloader",
+            "joined": "2024",
+            "isAlumni": false,
+            "imgPath": "https://codeberg.org/avatars/4d3baab4c8dc0ee685e6d707bb8d426a0d3405df4cde62f7b35a720bd327b040?size=512",
+            "links": [
+                {
+                    "name": "Email",
+                    "href": "mailto:alexander.sanderson@outlook.com"
+                },
+                {
+                    "name": "Website",
+                    "href": "https://constancies.art"
+                },
+                {
+                    "name": "Mastodon",
+                    "href": "https://metalhead.club/@constancies"
+                },
+                {
+                    "name": "Codeberg",
+                    "href": "https://codeberg.org/constancies"
+                },
+                {
+                    "name": "Github",
+                    "href": "https://github.com/Constancies"
+                },
+                {
+                    "name": "Bandcamp",
+                    "href": "https://constancies.bandcamp.com"
+                }
+            ]
+        }
+    ]
+}

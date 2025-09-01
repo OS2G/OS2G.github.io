@@ -54,6 +54,11 @@ to preview the site locally.)
   Github Pages.
 - The SSG program can be found in `./ssg.py`.  It can be ran with `python3
   ./ssg.py`.
+- The `./justfile` aliases common actions like building and serving the site.
+  Requires `just` to be installed, but you can also view the full commands by
+  opening the file.
+- The SSG's dependencies are listed in `./requirements.txt`, and can be
+  installed with `pip install -r requirements.txt`.
 
 ## Conventions
 

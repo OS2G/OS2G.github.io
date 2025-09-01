@@ -1,13 +1,13 @@
 {
     "profiles": [
         {
-            "name": "Carston Wiebe",
+            "name": "C Wiebe",
             "major": "Computer Engineering",
             "bio": "Interested in computer hardware, web development, languages (for programs or for humans), fiction books, video games, and occasionally art.",
             "role": "Primary Programmer",
             "joined": "2023",
             "isAlumni": false,
-            "imgPath": "/images/carston-wiebe-pfp-500x500.jpg",
+            "imgPath": "/images/c-wiebe-pfp-500x500.jpg",
             "links": [
                 {
                     "name": "Website",
@@ -15,15 +15,7 @@
                 },
                 {
                     "name": "Email",
-                    "href": "mailto:carstonwiebe17@gmail.com"
-                },
-                {
-                    "name": "Résumé",
-                    "href": "https://carstonwiebe17.github.io"
-                },
-                {
-                    "name": "LinkedIn",
-                    "href": "https://www.linkedin.com/in/carston-wiebe/"
+                    "href": "mailto:ctwiebe23@gmail.com"
                 }
             ]
         },

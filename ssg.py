@@ -14,6 +14,7 @@ RETCODE_NO_LAYOUT = 1
 RETCODE_NO_SRC = 2
 RETCODE_OUTPUT_DIR_IS_FILE = 3
 RETCODE_NO_DATA = 4
+RETCODE_NAMING_CONFLICT = 5
 
 if __name__ == "__main__":
     layout_path = Path("./layout.html")
@@ -54,7 +55,7 @@ if __name__ == "__main__":
             if path.is_dir():
                 if dest_path.is_file():
                     print(f"ERROR : naming conflict: {dest_path}")
-                    sys.exit(4)
+                    sys.exit(RETCODE_NAMING_CONFLICT)
                 if not dest_path.is_dir():
                     dest_path.mkdir()
                 # recursively operate on the inner directory

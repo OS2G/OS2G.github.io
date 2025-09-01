@@ -11,8 +11,15 @@ for development of the site.
 
 ### Required
 
+(These programs are run automatically by a Github Action whenever you push to
+the site, so they aren't technically required, but they are needed if you want
+to preview the site locally.)
+
 - [python3](https://www.python.org/) is needed to run the SSG script, and can
   also be used to serve the site locally.
+- [kera](https://ctwiebe23.github.io/kera) is used to build templated pages,
+  such as the members page.  It is a python package that can be installed
+  locally using `pip install -r ./requirements.txt`.
 
 ### Recommended
 
@@ -28,23 +35,25 @@ for development of the site.
 - The layout is found in `./layout.html`, and contains the `<head/>` tag along
   with any headers, footers, or navigation bars.  The page content will be
   inserted into the template in the place of the string `##CONTENTS##`.
+- Structured data used by templates can be found in `./data.json`.  For
+  instance, this file contains information about members that is used to create
+  the members page on the site.
 - The un-transformed site can be found in the `./src` directory.  When the SSG
   runs, this directory is copied wholesale into the destination directory with
-  every HTML file inserted into the layout.
+  every HTML file inserted into the layout and every template file ending in
+  `.plate` run through `kera`.
   - Reusable javascript (modules) are in the `./src/modules` directory.
   - All styles are in `./src/styles.css`.
   - The directories `./src/images` and `./src/fonts` contain, well, images and
     fonts.
-  - The `./src/data` directory contains additional resources, such as JSON
-    files.
   - `./src/index.html` contains the home page.
   - `./src/404.html` contains the error page.
-  - Subpages can be found in their own directories with there own `index.html`
+  - Subpages can be found in their own directories with their own `index.html`
     files — this is for prettier URLs.
 - The destination directory is `./www/`.  This is the directory published to
   Github Pages.
-- The SSG program can be found in `./ssg.py`.  It can be ran with
-  `python3 ./ssg.py`.
+- The SSG program can be found in `./ssg.py`.  It can be ran with `python3
+  ./ssg.py`.
 
 ## Conventions
 
@@ -54,8 +63,8 @@ for development of the site.
 
 ## Profiles
 
-Member profiles are defined in `./src/data/members.json`, and have the following
-fields (all optional):
+Member profiles are defined in `./data.json`, and have the following
+fields:
 
 `name`
 :   Your name.

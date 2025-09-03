@@ -17,7 +17,7 @@ to preview the site locally.)
 
 - [python3](https://www.python.org/) is needed to run the SSG script, and can
   also be used to serve the site locally.
-- [kera](https://ctwiebe23.github.io/kera) is used to build templated pages,
+- [kera](https://github.com/ctwiebe23/kera) is used to build templated pages,
   such as the members page.  It is a python package that can be installed
   locally using `pip install -r ./requirements.txt`.
 

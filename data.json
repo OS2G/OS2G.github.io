@@ -53,6 +53,29 @@
                     "href": "https://constancies.bandcamp.com"
                 }
             ]
-        }
+        },
+		{
+			"name": "Brett Johnson",
+			"major": "Software Engineering",
+			"bio": "Big into Linux, HomeLab, Cybersecurity, Operating Systems (OS), and Curling. Always interested in learning something new!\n48 65 79 2C 20 79 6F 75 20 64 69 64 20 61 20 74 68 69 6E 67 21",
+			"role": "",
+			"joined": "2023",
+			"isAlumni": false,
+			"imgPath":"https://avatars.githubusercontent.com/u/84330357?v=4&size=64",
+			"links": [
+				{
+					"name": "Email",
+					"href": "mailto:johnson.brett@bwjsoftware.com"
+				},
+				{
+					"name": "Website",
+					"href": "https://bwjsoftware.com"
+				},
+				{
+					"name": "Github",
+					"href": "https://github.com/bwjsoftware"
+				}
+			]
+		}
     ]
 }

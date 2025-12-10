@@ -9,12 +9,13 @@
 /* Page setup -------------------------------------------------------------- */
 
 html {
-  --os2g-text: light-dark(#2f372b, #cccccc);
-  --os2g-faded-text: light-dark(#888899, #888899);
-  --os2g-bg: light-dark(#f9eccc, #222222);
-  --os2g-bg2: light-dark(#e8dbbb, #333333);
+  --os2g-text: light-dark(#000000, #ffffff);
+  --os2g-faded-text: light-dark(#484848, #d9d9d9);
+  --os2g-bg: light-dark(#ffffff, #000000);
+  --os2g-bg2: light-dark(#c1feff, #9d0000);
   --os2g-error: light-dark(#cc4444, #cc4444);
-  --os2g-highlight: light-dark(#6677ee, #6677ee);
+  --os2g-highlight: light-dark(#ff0000, #00ffff);
+  --os2g-active-button-text: light-dark(#ffffff, #000000);
 
   --os2g-font-family: Outfit, sans-serif;
   --os2g-rule-width: 2px;
@@ -69,7 +70,7 @@ nav button:hover {
 }
 
 nav button:active {
-  color: var(--os2g-text);
+  color: var(--os2g-active-button-text);
   background: var(--os2g-highlight);
 }
 
@@ -291,6 +292,11 @@ ul.profile-meta {
 img.profile-pic {
   grid-area: img;
   border-radius: 1rem;
+}
+
+img.home {
+  max-width: 250px;
+  float: right;
 }
 
 p.profile-bio {

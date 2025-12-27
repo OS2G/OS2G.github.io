@@ -226,19 +226,33 @@ input[type="checkbox"] {
   margin: 0.5rem;
 }
 
-dl {
+dl.schedule {
   display: grid;
   grid-template-columns: min-content 1fr;
-  row-gap: 0.75rem;
-  column-gap: 1rem;
-}
 
-dt {
-  white-space:nowrap;
-}
+  dt,
+  dd {
+    padding: 0 0.5rem;
+  }
 
-dt::after {
-  content: ": ";
+  dt {
+    white-space: nowrap;
+    color: var(--os2g-faded-text);
+    padding-right: 1rem;
+
+    &:nth-child(4n + 1) {
+      background: var(--os2g-bg2);
+    }
+  }
+
+  dd {
+    border-left: var(--os2g-rule-width) solid var(--os2g-highlight);
+    padding-left: 1rem;
+
+    &:nth-child(4n - 2) {
+      background: var(--os2g-bg2);
+    }
+  }
 }
 
 /* Classes ----------------------------------------------------------------- */

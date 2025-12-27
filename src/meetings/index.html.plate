@@ -21,7 +21,7 @@
 </section>
 <section>
   <h3>Schedule</h3>
-  <dl>
+  <dl class="schedule">
     ##schedule{{
     <dt>##date##</dt><dd>##name##</dd>
     }}

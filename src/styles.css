@@ -137,14 +137,22 @@ li {
 }
 
 a {
-  color: var(--os2g-highlight);
   text-decoration: none;
-
   white-space: nowrap;
-}
 
-a:hover {
-  text-decoration: underline 0.1rem solid var(--os2g-highlight);
+  color: var(--os2g-highlight);
+
+  &:hover {
+    text-decoration: underline 0.1rem solid var(--os2g-highlight);
+  }
+
+  &.hidden-link {
+    color: var(--os2g-text);
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 button {
@@ -990,8 +998,8 @@ button.remove-link {
   }
 }
 
-*.kf-glitch {
-  animation: glitch 3s 10s steps(100);
+*.kf-glitch:hover {
+  animation: glitch 3s steps(100) infinite;
 }
 
 /* Fonts ------------------------------------------------------------------- */

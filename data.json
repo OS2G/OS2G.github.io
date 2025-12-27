@@ -1,81 +1,100 @@
 {
-    "profiles": [
+  "schedule": [
+    { "date": "JAN 15 2026", "name": "Semester Welcome" },
+    { "date": "JAN 22 2026", "name": "New Member Meeting" },
+    { "date": "JAN 29 2026", "name": "Linux Install-athon" },
+    { "date": "FEB 05 2026", "name": "TBD" },
+    { "date": "FEB 12 2026", "name": "TBD" },
+    { "date": "FEB 19 2026", "name": "TBD" },
+    { "date": "FEB 26 2026", "name": "TBD" },
+    { "date": "MAR 05 2026", "name": "TBD" },
+    { "date": "MAR 12 2026", "name": "TBD" },
+    { "date": "MAR 19 2026", "name": "Spring break (No meeting)" },
+    { "date": "MAR 26 2026", "name": "TBD" },
+    { "date": "APR 02 2026", "name": "TBD" },
+    { "date": "APR 09 2026", "name": "TBD" },
+    { "date": "APR 16 2026", "name": "TBD" },
+    { "date": "APR 23 2026", "name": "Semester Send-off" },
+    { "date": "APR 30 2026", "name": "Dead week (No meeting)" },
+    { "date": "MAY 07 2026", "name": "Finals week (No meeting)" }
+  ],
+  "profiles": [
+    {
+      "name": "Carston Wiebe",
+      "major": "Computer Engineering",
+      "bio": "Interested in computer hardware, web development, languages (for programs or for humans), fiction books, video games, and occasionally art.",
+      "role": "Primary Programmer",
+      "joined": "2023",
+      "isAlumni": false,
+      "imgPath": "/images/c-wiebe-pfp-500x500.jpg",
+      "links": [
         {
-            "name": "Carston Wiebe",
-            "major": "Computer Engineering",
-            "bio": "Interested in computer hardware, web development, languages (for programs or for humans), fiction books, video games, and occasionally art.",
-            "role": "Primary Programmer",
-            "joined": "2023",
-            "isAlumni": false,
-            "imgPath": "/images/c-wiebe-pfp-500x500.jpg",
-            "links": [
-                {
-                    "name": "Website",
-                    "href": "https://ctwiebe23.github.io"
-                },
-                {
-                    "name": "Email",
-                    "href": "mailto:ctwiebe23@gmail.com"
-                }
-            ]
+          "name": "Website",
+          "href": "https://ctwiebe23.github.io"
         },
         {
-            "name": "Alexander Sanderson",
-            "major": "Computer Science",
-            "bio": "I'm a Linux enthusiast, programmer, metal musician and guitarist, and poet.",
-            "role": "New contributor / freeloader",
-            "joined": "2024",
-            "isAlumni": false,
-            "imgPath": "https://codeberg.org/avatars/4d3baab4c8dc0ee685e6d707bb8d426a0d3405df4cde62f7b35a720bd327b040?size=512",
-            "links": [
-                {
-                    "name": "Email",
-                    "href": "mailto:alexander.sanderson@outlook.com"
-                },
-                {
-                    "name": "Website",
-                    "href": "https://constancies.art"
-                },
-                {
-                    "name": "Mastodon",
-                    "href": "https://metalhead.club/@constancies"
-                },
-                {
-                    "name": "Codeberg",
-                    "href": "https://codeberg.org/constancies"
-                },
-                {
-                    "name": "Github",
-                    "href": "https://github.com/Constancies"
-                },
-                {
-                    "name": "Bandcamp",
-                    "href": "https://constancies.bandcamp.com"
-                }
-            ]
+          "name": "Email",
+          "href": "mailto:ctwiebe23@gmail.com"
+        }
+      ]
+    },
+    {
+      "name": "Alexander Sanderson",
+      "major": "Computer Science",
+      "bio": "I'm a Linux enthusiast, programmer, metal musician and guitarist, and poet.",
+      "role": "New contributor / freeloader",
+      "joined": "2024",
+      "isAlumni": false,
+      "imgPath": "https://codeberg.org/avatars/4d3baab4c8dc0ee685e6d707bb8d426a0d3405df4cde62f7b35a720bd327b040?size=512",
+      "links": [
+        {
+          "name": "Email",
+          "href": "mailto:alexander.sanderson@outlook.com"
         },
-		{
-			"name": "Brett Johnson",
-			"major": "Software Engineering",
-			"bio": "Big into Linux, HomeLab, Cybersecurity, Operating Systems (OS), and Curling. Always interested in learning something new!\n48 65 79 2C 20 79 6F 75 20 64 69 64 20 61 20 74 68 69 6E 67 21",
-			"role": "",
-			"joined": "2023",
-			"isAlumni": false,
-			"imgPath":"https://avatars.githubusercontent.com/u/84330357?v=4&size=64",
-			"links": [
-				{
-					"name": "Email",
-					"href": "mailto:johnson.brett@bwjsoftware.com"
-				},
-				{
-					"name": "Website",
-					"href": "https://bwjsoftware.com"
-				},
-				{
-					"name": "Github",
-					"href": "https://github.com/bwjsoftware"
-				}
-			]
-		}
-    ]
+        {
+          "name": "Website",
+          "href": "https://constancies.art"
+        },
+        {
+          "name": "Mastodon",
+          "href": "https://metalhead.club/@constancies"
+        },
+        {
+          "name": "Codeberg",
+          "href": "https://codeberg.org/constancies"
+        },
+        {
+          "name": "Github",
+          "href": "https://github.com/Constancies"
+        },
+        {
+          "name": "Bandcamp",
+          "href": "https://constancies.bandcamp.com"
+        }
+      ]
+    },
+    {
+      "name": "Brett Johnson",
+      "major": "Software Engineering",
+      "bio": "Big into Linux, HomeLab, Cybersecurity, Operating Systems (OS), and Curling. Always interested in learning something new!\n48 65 79 2C 20 79 6F 75 20 64 69 64 20 61 20 74 68 69 6E 67 21",
+      "role": "",
+      "joined": "2023",
+      "isAlumni": false,
+      "imgPath": "https://avatars.githubusercontent.com/u/84330357?v=4&size=64",
+      "links": [
+        {
+          "name": "Email",
+          "href": "mailto:johnson.brett@bwjsoftware.com"
+        },
+        {
+          "name": "Website",
+          "href": "https://bwjsoftware.com"
+        },
+        {
+          "name": "Github",
+          "href": "https://github.com/bwjsoftware"
+        }
+      ]
+    }
+  ]
 }

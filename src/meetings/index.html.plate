@@ -1,0 +1,29 @@
+<h2>Meetings</h2>
+<section>
+  <p>
+    OS2G meets in-person on <time>Thursdays from 6:00 PM to 8:00 PM</time>
+    in Kiewit Hall room A549.  Our typical meeting structures include:
+  </p>
+  <ul>
+    <li>
+      Talk days, where someone from inside or outside the club gives an
+      informative talk.
+    </li>
+    <li>
+      Social days, where people work on homework or projects and discuss current
+      tech events.
+    </li>
+    <li>
+      Fun days, which are scheduled events such as Soup Day, Mana Games day, or
+      movie nights.
+    </li>
+  </ul>
+</section>
+<section>
+  <h3>Schedule</h3>
+  <dl>
+    ##schedule{{
+    <dt>##date##</dt><dd>##name##</dd>
+    }}
+  </dl>
+</section>

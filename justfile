@@ -1,6 +1,6 @@
 # Runs the SSG script to build the site
 build:
-	python3 ./ssg.py
+	./venv/bin/python3.11 ./ssg.py
 
 # Runs the build script anytime a file in ./src changes
 watch:

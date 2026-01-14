@@ -1,0 +1,6 @@
+to: beamer
+metadata:
+  theme: Boadilla
+  fontfamily: bookman
+  aspectratio: 169
+  innertheme: rectangles

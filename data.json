@@ -74,6 +74,29 @@
       ]
     },
     {
+      "name": "Cale Sigerson",
+      "major": "Computer Science",
+      "bio": "Music and riichi mahjong enthusiast, also an information sponge.",
+      "role": "Treasurer",
+      "joined": "2023",
+      "isAlumni": false,
+      "imgPath": "https://avatars.githubusercontent.com/u/73205524?v=4",
+      "links": [
+        {
+          "name": "Email",
+          "href": "mailto:non300300@gmail.com"
+        },
+        {
+          "name": "Github",
+          "href": "https://github.com/Mawasu"
+        },
+        {
+          "name": "RYM",
+          "href": "https://rateyourmusic.com/~Malas"
+        }
+      ]
+    },
+    {
       "name": "Brett Johnson",
       "major": "Software Engineering",
       "bio": "Big into Linux, HomeLab, Cybersecurity, Operating Systems (OS), and Curling. Always interested in learning something new!\n48 65 79 2C 20 79 6F 75 20 64 69 64 20 61 20 74 68 69 6E 67 21",

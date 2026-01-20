@@ -1,0 +1,11 @@
+beamer DIR:
+	if [ -f {{DIR}}/beamer.md ]; \
+	then pandoc --defaults beamer.yml {{DIR}}/beamer.md --output {{DIR}}/slides.pdf; \
+	else echo "{{DIR}}/beamer.md does not exist"; \
+	fi
+
+presenterm DIR:
+	if [ -f {{DIR}}/presenterm.md ]; \
+	then presenterm {{DIR}}/presenterm.md --export-pdf --output {{DIR}}/slides.pdf; \
+	else echo "{{DIR}}/presenterm.md does not exist"; \
+	fi

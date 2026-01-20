@@ -1,3 +1,4 @@
+# A "default file" used by pandoc to generate PDF slideshows using beamer
 to: beamer
 metadata:
   theme: Boadilla

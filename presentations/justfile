@@ -1,5 +1,0 @@
-beamer DIR:
-	pandoc --defaults beamer.yml {{DIR}}/beamer.md --output {{DIR}}/out.pdf
-
-presenterm DIR:
-	presenterm {{DIR}}/presenterm.md --export-pdf --output {{DIR}}/out.pdf

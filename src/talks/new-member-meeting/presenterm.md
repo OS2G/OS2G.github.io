@@ -162,11 +162,15 @@ Upcoming Events
 
 <!--column: 0-->
 
+<!--pause-->
+
 ## Nvolvement Fair
 
 - Next week (Jan 29)
 - 4-6:30 PM @ the Union
 - Feel free to stop by our booth!
+
+<!--pause-->
 
 ## Install-a-thon
 
@@ -174,7 +178,10 @@ Upcoming Events
 - Install linux
   - Raspberry Pi Zero W
   - Dual-boot
+<!--pause-->
   - Wipe your laptop in the middle of the semester!
+
+<!--pause-->
 
 ### Later on...
 
@@ -183,6 +190,8 @@ Upcoming Events
 - FOSS Jam
 
 <!--column: 1-->
+
+<!--pause-->
 
 # Join our Discord!
 

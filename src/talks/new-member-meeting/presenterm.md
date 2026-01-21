@@ -14,7 +14,13 @@ theme:
 Welcome to (OS)2G!
 ===
 
-<!--column_layout: [1, 2, 1]-->
+<!--column_layout: [1, 1]-->
+
+<!--column: 0-->
+
+TODO OS2G image
+
+TODO Tux
 
 <!--column: 1-->
 
@@ -67,6 +73,8 @@ Introductions
 
 <!--pause-->
 
+![](./images/carston.jpg)
+
 # Carston
 
 ## President
@@ -77,6 +85,8 @@ Introductions
 
 <!--pause-->
 
+![](./images/alex.jpg)
+
 # Alex
 
 ## Primary Programmer
@@ -86,6 +96,8 @@ Introductions
 <!--column: 2-->
 
 <!--pause-->
+
+![](./images/cale.jpg)
 
 # Cale
 
@@ -134,6 +146,53 @@ What is...
   - Docker
   - Node.js
   - Linux itself
+- Drives innovation
+- Betters the experiences of everyone
+
+## What we can do about it
+
+- Contribute!
+  - "Open-Source" means anyone can
+- FOSS Jam
+
+Upcoming Events
+===
+
+<!--column_layout: [1,1]-->
+
+<!--column: 0-->
+
+## Nvolvement Fair
+
+- Next week (Jan 29)
+- 4-6:30 PM @ the Union
+- Feel free to stop by our booth!
+
+## Install-a-thon
+
+- The following week (Feb 05)
+- Install linux
+  - Raspberry Pi Zero W
+  - Dual-boot
+  - Wipe your laptop in the middle of the semester!
+
+### Later on...
+
+- Microtalks
+- Mana Games
+- FOSS Jam
+
+<!--column: 1-->
+
+# Join our Discord!
+
+![](./images/discord_qr.png)
+
+**https://os2g.club/redirect/discord**
+
+## View the full schedule
+
+**https://os2g.club/meetings**
 
 <!--end_slide-->
 

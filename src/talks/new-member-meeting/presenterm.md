@@ -18,17 +18,17 @@ Welcome to (OS)2G!
 
 <!--column: 0-->
 
-TODO OS2G image
+![image:width:50%](./images/os2g.png)
 
-TODO Tux
-
-<!--column: 1-->
-
-# What is os2g?
+# What is OS2G?
 
 - The Operating Systems & Open Source Group
 - Computer science social club
 - Focuses on Linux and Open-Source software
+
+<!--pause-->
+
+<!--column: 1-->
 
 # What do you do?
 
@@ -38,6 +38,8 @@ TODO Tux
   - Server administration
   - ...and more!
 - Host events and social days
+
+![](./images/tux.png)
 
 Meetings
 ===
@@ -52,17 +54,32 @@ We have 3 types of meetings:
 
 # Talk days
 
+- From members or teachers
+- Often technical
+- This semester:
+  - Filetypes and codecs
+  - Networking
+  - Music Technology
+  - Cloud services
+
 <!--column: 1-->
 
 <!--pause-->
 
 # Events
 
+- Install-a-thon
+- Microtalks
+- FOSS Jam
+
 <!--column: 2-->
 
 <!--pause-->
 
 # Social days
+
+- Mana Games
+- Project/work days
 
 Introductions
 ===
@@ -104,6 +121,20 @@ Introductions
 ## Treasurer
 
 ## Computer Science
+
+<!--end_slide-->
+
+<!--column_layout: [1, 2, 1]-->
+
+<!--column: 1-->
+
+<!--jump_to_middle-->
+
+# Name
+
+## Year + Major
+
+### Interests
 
 What is...
 ===
@@ -195,7 +226,7 @@ Upcoming Events
 
 # Join our Discord!
 
-![](./images/discord_qr.png)
+![image:width:50%](./images/discord_qr.png)
 
 **https://os2g.club/redirect/discord**
 

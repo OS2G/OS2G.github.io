@@ -111,10 +111,27 @@ W.
 
 <!--column: 0-->
 
-3.  Select **Raspberry Pi OS Lite (32-bit)** from the "More" menu
-4.  Enable SSH over USB (so you can connect to your Pi easily)
-5.  Flash to the SD card
-6.  Put the card into your Pi and power it on
+3.  Select **Raspberry Pi Zero** as Device
+4.  Select **Raspberry Pi OS (other) > Raspberry Pi OS Lite (32-bit)** as OS
+5.  Follow prompts as directed
+6.  Enable SSH
+7.  ~~if it shows up~~ Enable USB Gadget mode
+    - Else try Raspberry Pi Connect
+8.  Write the image to the SD card
+9.  Put the card into your Pi and plug your Pi into power / laptop
+
+Connect to your Pi
+===
+
+<!--column_layout: [1,2,1]-->
+
+<!--column: 1-->
+
+Open a terminal or PuTTY and connect to your Pi.
+
+```
+ssh username@host
+```
 
 Common Commands
 ===
@@ -183,6 +200,10 @@ Common Commands
 <!--pause-->
 
 - <span style="color:red">tailscale</span> is used to connect devices in an internal network
+
+<!--pause-->
+
+- <span style="color:red">apache</span> is a classic web server
 
 <!--end_slide-->
 

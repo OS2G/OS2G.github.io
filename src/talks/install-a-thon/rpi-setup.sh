@@ -43,7 +43,7 @@ mkdir downloads
 cd downloads
 
 # download UNL's eduroam wifi script
-wget --post-data 'request=deployLinux' --out-document 'eduroam-setup.sh' https://cloud.securew2.com/public/25806/nu-net/php/deploy.php
+wget --post-data 'request=deployLinux' -O 'eduroam-setup.sh' https://cloud.securew2.com/public/25806/nu-net/php/deploy.php
 
 # run the UNL script you just downloaded
 bash eduroam-setup.sh

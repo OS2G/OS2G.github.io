@@ -503,6 +503,10 @@ real filetypes
 real filetypes
 ===
 
+<!--column_layout: [1,1]-->
+
+<!--column: 0-->
+
 # png compression
 
 <!--pause-->
@@ -529,6 +533,11 @@ real filetypes
 - intended to get everything close to 0 for `deflate`s benefit
 <!--pause-->
 - basically, take the derivative of the image
+
+<!--column: 1-->
+<!--pause-->
+
+![image:width:100%](./images/qr.png)
 
 closing
 ===
@@ -578,11 +587,11 @@ don't worry it's not that hard.  trust
 
 <!--column: 0-->
 
-# riff
+## riff
 
 ```
 id   : 4 bytes
-size : 4 bytes
+size : 4 bytes (little-endian)
 data : size bytes
 pad  : 1 or 0 bytes (total must be even)
 ```

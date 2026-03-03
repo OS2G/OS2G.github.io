@@ -38,7 +38,7 @@ jobs:
       - name: Install dependencies
         run: pip install kera
       - name: Run SSG
-        run: python ssg.py
+        run: python ssg.py --auto-index
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

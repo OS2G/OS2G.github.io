@@ -138,7 +138,6 @@ li {
 
 a {
   text-decoration: none;
-  white-space: nowrap;
 
   color: var(--os2g-highlight);
 
@@ -236,7 +235,7 @@ input[type="checkbox"] {
   margin: 0.5rem;
 }
 
-dl.schedule {
+dl.schedule, dl.dirlist {
   display: grid;
   grid-template-columns: min-content 1fr;
 
@@ -258,6 +257,7 @@ dl.schedule {
   dd {
     border-left: var(--os2g-rule-width) solid var(--os2g-highlight);
     padding-left: 1rem;
+    overflow-x: auto;
 
     &:nth-child(4n - 2) {
       background: var(--os2g-bg2);
@@ -273,6 +273,11 @@ figure {
 figcaption {
   font-size: 0.8rem;
   color: var(--os2g-faded-text);
+}
+
+code {
+    font-family: DMMono, monospace;
+    font-size:0.9em;
 }
 
 /* Classes ----------------------------------------------------------------- */
@@ -1013,4 +1018,15 @@ button.remove-link {
   font-family: Outfit;
   src: url("./fonts/Outfit-Bold.ttf");
   font-weight: bold;
+}
+
+@font-face {
+  font-family: DMMono;
+  src: url("./fonts/DMMono-Regular.ttf");
+}
+
+@font-face {
+  font-family: DMMono;
+  src: url("./fonts/DMMono-Italic.ttf");
+  font-style: italic;
 }

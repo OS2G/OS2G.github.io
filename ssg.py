@@ -1,13 +1,18 @@
-"""
-Simple SSG that generates a website using kera.
+"""!
+@package    ssg
+@author     C Wiebe <ctwiebe23@gmail.com>
+@date       Mar 12 2026
+@brief      Simple SSG that generates a website using kera.
 """
 
 from pathlib import Path
+
 import argparse
 import shutil
 import sys
-import kera
 import json
+
+import kera
 
 # return codes
 RETCODE_OK = 0
@@ -27,7 +32,9 @@ DEFAULT_WWW_PATH = "./www"
 ENCODING = "utf-8"
 CONTENT_STRING = "##CONTENTS##"
 
-if __name__ == "__main__":
+
+def get_args():
+    "Builds the argument parser and retrieves the command line arguments."
     parser = argparse.ArgumentParser(
         prog="ssg",
         description="A simple python SSG",
@@ -35,49 +42,62 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
-        "-l", "--layout",
+        "-l",
+        "--layout",
         default=DEFAULT_LAYOUT_PATH,
         type=str,
         help="Path to the layout file",
     )
 
     parser.add_argument(
-        "-c", "--content-string",
+        "-c",
+        "--content-string",
         type=str,
         default=CONTENT_STRING,
-        help="The string in the layout file that should be replaced with page content"
+        help="The string in the layout file that should be replaced with page content",
     )
 
     parser.add_argument(
-        "-s", "--src",
+        "-s",
+        "--src",
         default=DEFAULT_SRC_PATH,
         type=str,
         help="Path to the source directory",
     )
 
     parser.add_argument(
-        "-d", "--data",
+        "-d",
+        "--data",
         default=DEFAULT_DATA_PATH,
         type=str,
         help="Path to the JSON data file",
     )
 
     parser.add_argument(
-        "-w", "--www",
+        "-w",
+        "--www",
         default=DEFAULT_WWW_PATH,
         type=str,
         help="Path to the output directory",
     )
 
     parser.add_argument(
-        "-a", "--auto-index",
+        "-a",
+        "--auto-index",
         action="store_true",
         default=False,
         help="Auto-generate directory listings in index-less directories",
     )
 
     args = parser.parse_args()
+    return args
 
+
+def confirm_file_locations(args):
+    """
+    Confirms all files are where they should be, creating them if needed and
+    possible.
+    """
     layout_path = Path(args.layout)
     if not layout_path.is_file():
         print(f"ERROR : {layout_path} is not a file")
@@ -100,6 +120,13 @@ if __name__ == "__main__":
     if not output_dir_path.is_dir():
         output_dir_path.mkdir()
 
+    return layout_path, src_dir_path, data_path, output_dir_path
+
+
+def main():
+    args = get_args()
+    layout_path, src_dir_path, data_path, output_dir_path = confirm_file_locations(args)
+
     layout = layout_path.read_text(encoding=ENCODING)
     data = data_path.read_text(encoding=ENCODING)
     data = json.loads(data)
@@ -121,18 +148,26 @@ if __name__ == "__main__":
             return
 
         dest_path = dest_dir / "index.html"
-        html = f'<h2>Index of <code>{dir.name}</code></h2><section><dl class="dirlist">'
+        html = (
+            f'<h2>Index of <code>{dir.name}</code></h2><section><dl class="dirlist">'
+            + "<dt>DIR</dt>"
+            + '<dd><a href=".." target="_self"><code>..</code></a></dd>'
+        )
 
         # TODO: sanitize HTML
-        for path in dir.iterdir():
+        for path in sorted(dir.iterdir(), key=str):
             ext = path.suffix[1:].upper() or "TXT" if path.is_file() else "DIR"
             target = "_blank" if path.is_file() else "_self"
-            html += f'<dt>{ext}</dt><dd><a href="./{path.name}" target="{target}"><code>{path.name}</code></a></dd>'
+            html += (
+                f"<dt>{ext}</dt>"
+                + f'<dd><a href="./{path.name}" target="{target}">'
+                + f'<code>{path.name if path.is_file() else (path.name + "/")}</code>'
+                + "</a></dd>"
+            )
 
         html += "</dl></section>"
         page = layout.replace(args.content_string, html)
         dest_path.write_text(page, encoding=ENCODING)
-
 
     def copy_dir_and_process_html(dir_path: Path, dest_dir_path: Path):
         """
@@ -154,13 +189,13 @@ if __name__ == "__main__":
                     create_index_page_for(path, dest_path)
                 # recursively operate on the inner directory
                 copy_dir_and_process_html(path, dest_path)
-            else: # handling a file
+            else:  # handling a file
                 if path.match("*.html"):
                     contents = path.read_text(encoding=ENCODING)
                     page = layout.replace(args.content_string, contents)
                     dest_path.write_text(page, encoding=ENCODING)
                 elif path.match("*.plate"):
-                    dest_path = dest_path.with_suffix("") # remove .plate suffix
+                    dest_path = dest_path.with_suffix("")  # remove .plate suffix
                     contents = path.read_text(encoding=ENCODING)
                     generated = kera.process(contents, data)
                     if dest_path.match("*.html"):
@@ -171,3 +206,7 @@ if __name__ == "__main__":
 
     copy_dir_and_process_html(src_dir_path, output_dir_path)
     sys.exit(RETCODE_OK)
+
+
+if __name__ == "__main__":
+    main()

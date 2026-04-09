@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Music Tech &amp; Synths</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="light" name="color-scheme">
+    <base rel="noopener noreferrer" target="_blank">
+    <meta content="Carston Wiebe" name="author">
+    <style>
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight:normal;
+    font-size:1em;
+    line-height:1.2;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, figure {
+    margin-block:1rem;
+}
+
+li + li {
+    margin-top:0.2rem;
+}
+
+:is(ol, ul) :is(ol, ul) {
+    margin-block:0;
+}
+
+ul, ol {
+    margin-left:2ch;
+}
+
+html {
+    --text:light-dark(#222222, #efefff);
+    --bg:light-dark(#ffffff, #22222f);
+
+    color:var(--text);
+    background:var(--bg);
+
+    font:15pt / 1.5 serif;
+
+    scroll-behavior:smooth;
+
+    counter-reset:figure;
+
+    @media (width < 70ch) {
+        font-size:13pt;
+    }
+}
+
+body {
+    padding:1rem;
+    margin-inline:auto;
+    max-width:70ch;
+    min-height:100vh;
+}
+
+h1 {
+    font-size:2em;
+    margin-block:75vh 1rem;
+}
+
+h2 {
+    font-size:1.5em;
+    margin-block:75vh 1rem;
+}
+
+h3 {
+    font-size:1.5em;
+    margin-block:2rem 1rem;
+}
+
+p {
+    hyphens:auto;
+    text-align:justify;
+}
+
+blockquote {
+    margin-inline:1rem;
+    padding-inline:1rem;
+    border-left:0.1rem solid currentcolor;
+}
+
+img {
+    max-width:100%;
+}
+
+figure {
+    margin:2rem auto;
+    width:fit-content;
+    max-width:90%;
+    display:table;
+}
+
+figcaption {
+    font-size:0.8rem;
+    display:table-caption;
+    caption-side:bottom;
+}
+
+img + figcaption::before {
+    counter-increment:figure;
+    content:"Figure "counter(figure)": ";
+}
+
+header {
+    font-size:1.3rem;
+
+    h1 {
+        margin-top:30vh;
+    }
+}
+
+footer {
+    margin-top:30vh;
+}
+
+.toc {
+    margin-top:75vh;
+
+    &::before {
+        display:block;
+        content:"Table of Contents";
+        font-size:1.5rem;
+    }
+
+    ul {
+        list-style:"";
+    }
+
+    a {
+        color:currentcolor;
+        text-decoration:none;
+    }
+}
+</style>
+  </head>
+  <body>
+    <header>
+      <h1>Music Technology &amp; Modular Synthesis</h1>
+      <div>by Carston Wiebe</div>
+      <div>on Apr 09 2026 (gen. 260409)</div>
+    </header>
+    <main><div class="toc">
+<ul>
+<li><a href="#modular-synthesis">Modular Synthesis</a></li>
+<li><a href="#digital-audio-workstations">Digital Audio Workstations</a></li>
+<li><a href="#synth-modules">Synth Modules</a></li>
+<li><a href="#my-synth">My Synth</a></li>
+<li><a href="#software">Software</a></li>
+</ul>
+</div>
+<h1 id="modular-synthesis">Modular Synthesis</h1>
+<ul>
+<li>Synthesize audio waves from first principles</li>
+<li>Analog (physical synth) and digital (DAW plugins)</li>
+<li>Imitate almost any instrument</li>
+<li>Create unique sounds</li>
+</ul>
+<p>
+<figure><img src="./img/polyfusion_daimius.jpg" /><figcaption>Steve Porcaro (from Toto) with the Polyfusion Daimius
+synth.</figcaption>
+</figure>
+</p>
+<p>
+<figure><img src="./img/modern_moog.jpg" /><figcaption>A modern Moog synth (the Subsequent 25).</figcaption>
+</figure>
+</p>
+<p>
+<figure><img src="./img/synth1.png" /><figcaption>The <code>synth1</code> VST plugin.</figcaption>
+</figure>
+</p>
+<h2 id="moog-synthesizer">Moog Synthesizer</h2>
+<ul>
+<li>Created by Robert Moog</li>
+<li>Work started in 1963 after meeting Herb Deutsch</li>
+<li>Innovated in its use of transistors instead of vacuum tubes</li>
+<li>$16,000 grant</li>
+</ul>
+<p>
+<figure><img src="./img/moog.jpg" /><figcaption>The first commercial Moog synth.</figcaption>
+</figure>
+</p>
+<blockquote>
+<p>According to Moog, when Deutsch saw this, he became excited and immediately
+began making music with the prototype, attracting the interest of passersby:
+"They would stand there, they'd listen and they'd shake their heads ... What
+is this weird shit coming out of the basement?"</p>
+</blockquote>
+<ul>
+<li>Presented at the annual Audio Engineering Society convention in 1964</li>
+<li>People bought his synth then and there, even though he didn't plan to sell it</li>
+<li>Built to order, no instruction books or guides</li>
+</ul>
+<h2 id="problems">Problems</h2>
+<ul>
+<li><strong>Very</strong> expensive</li>
+<li>Analog synths are specialized hardware</li>
+<li>Digital synths are subscriptions and proprietary software</li>
+<li>Choice overload</li>
+</ul>
+<h1 id="digital-audio-workstations">Digital Audio Workstations</h1>
+<ul>
+<li>One stop shop</li>
+<li>Common ones are:<ul>
+<li>Reaper</li>
+<li>FL Studio</li>
+<li>Ableton</li>
+</ul>
+</li>
+</ul>
+<p>
+<figure><img src="./img/reaper.png" /><figcaption>Reaper's interface.</figcaption>
+</figure>
+</p>
+<h3 id="virtual-studio-technology">Virtual Studio Technology</h3>
+<ul>
+<li>FOSS plugin system for DAWs</li>
+<li>Hundreds of thousands free and paid VSTs are available</li>
+</ul>
+<h1 id="synth-modules">Synth Modules</h1>
+<ul>
+<li>Many, many different types</li>
+<li>Control, modification, generation</li>
+</ul>
+<h3 id="eurorack">Eurorack</h3>
+<p>
+<figure><img src="./img/eurorack.jpg" /><figcaption>A Eurorack... rack, I guess?</figcaption>
+</figure>
+</p>
+<ul>
+<li>Based on the Eurocard standard<ul>
+<li>IEEE</li>
+<li>Standard PCB sizes that can all fit into the same cases</li>
+</ul>
+</li>
+<li>Uses U for height units and HP for width units</li>
+<li>+/-12V power</li>
+</ul>
+<p>
+<figure><img src="./img/hp_dims.jpg" /><figcaption>Eurorack widths.  The standard height is 3U.</figcaption>
+</figure>
+</p>
+<h2 id="voltage-controlled-oscillators">Voltage Controlled Oscillators</h2>
+<ul>
+<li>Create the base waveform that your human ears can hear</li>
+<li>Inputs control the pitch of the sounds, not the volume</li>
+<li>Most oscillator modules will have multiple VCOs</li>
+</ul>
+<p>
+<figure><img src="./img/waves.png" /><figcaption>Different waves VCOs can produce.</figcaption>
+</figure>
+</p>
+<h2 id="voltage-controlled-filters">Voltage Controlled Filters</h2>
+<ul>
+<li>The most basic way to modify sounds</li>
+<li>Typically, VCOs connect directly to VCFs</li>
+</ul>
+<p>
+<figure><img src="./img/filters.jpg" /><figcaption>Different types of filters.</figcaption>
+</figure>
+</p>
+<ul>
+<li><code>&lt;INSERT FOURIER TRANSFORM TANGENT HERE&gt;</code></li>
+</ul>
+<p>
+<figure><img src="./img/recon.png" /><figcaption>A square wave that is poorly reconstructed.</figcaption>
+</figure>
+</p>
+<p>
+<figure><img src="./img/rounded.gif" /><figcaption>A filtered square wave.</figcaption>
+</figure>
+</p>
+<ul>
+<li>Filtering a sine wave is useless (or, technically it is volume control!)</li>
+</ul>
+<h2 id="voltage-controlled-amplifiers">Voltage Controlled Amplifiers</h2>
+<ul>
+<li><em>Actual</em> volume control</li>
+<li>The only way to turn a VCO "off"</li>
+</ul>
+<h2 id="low-frequency-oscillators">Low Frequency Oscillators</h2>
+<ul>
+<li>VCOs that produce sounds below the human range of hearing</li>
+<li>Used as control signals for other modules</li>
+<li>Vibratto, tremelo</li>
+</ul>
+<h3 id="frequency-modulation">Frequency Modulation</h3>
+<p>
+<figure><img src="./img/freqmod.png" /><figcaption>A simple FM setup.</figcaption>
+</figure>
+</p>
+<h2 id="envelope-generators">Envelope Generators</h2>
+<ul>
+<li>Unlike everything else mentioned here, these only "fire off" when a key is
+  pressed</li>
+<li>Four properties<ul>
+<li><strong>Attack</strong></li>
+<li><strong>Delay</strong></li>
+<li><strong>Sustain</strong></li>
+<li><strong>Release</strong></li>
+</ul>
+</li>
+</ul>
+<p>
+<figure><img src="./img/adsr.jpg" /><figcaption>The standard ADSR waveform.</figcaption>
+</figure>
+</p>
+<h2 id="ring-modulators">Ring Modulators</h2>
+<ul>
+<li>Like FM but for the amplitude instead of the frequency</li>
+</ul>
+<p>
+<figure><img src="./img/ring_modulation.png" /><figcaption>Input and output waveforms in a ring modulator.  From top to bottom:
+Carrier, modulator, output.</figcaption>
+</figure>
+</p>
+<h2 id="and-more">And More!</h2>
+<ul>
+<li>Noise circuits create random noise (white, brown, blue, pink)</li>
+<li>Mixers combine multiple waves into one</li>
+<li>Splitters duplicate one wave into multiple</li>
+<li>Sequencers create repeating patterns</li>
+</ul>
+<h1 id="my-synth">My Synth</h1>
+<h3 id="core-module">Core Module</h3>
+<ul>
+<li>A Raspberry Pi Pico with extra outputs duct-taped on.</li>
+<li>Control Signals and Power Supply</li>
+<li>Creates the CV using an I2C-controlled Digital-to-Analog Converter</li>
+</ul>
+<p>
+<figure><img src="./img/core.png" /><figcaption>Kicad Schematic for the Core.</figcaption>
+</figure>
+</p>
+<h3 id="oscillator-module">Oscillator Module</h3>
+<ul>
+<li>One VCO, one LFO</li>
+</ul>
+<p>
+<figure><img src="./img/osc.png" /><figcaption>Kicad Schematic for the Oscillator.</figcaption>
+</figure>
+</p>
+<h3 id="filter-module">Filter Module</h3>
+<ul>
+<li>Straight ripoff of the Polivoks filter</li>
+</ul>
+<p>
+<figure><img src="./img/vcf.png" /><figcaption>Kicad Schematic for the Filter.</figcaption>
+</figure>
+</p>
+<h3 id="amp-module">Amp Module</h3>
+<ul>
+<li>VCA and ADSR ENV</li>
+</ul>
+<p>
+<figure><img src="./img/vca.png" /><figcaption>Kicad Schematic for the VCA.</figcaption>
+</figure>
+</p>
+<h2 id="assembled">Assembled!</h2>
+<p>
+<figure><img src="./img/real.jpg" /><figcaption>The assembled Core and Oscillator boards.</figcaption>
+</figure>
+</p>
+<h1 id="software">Software</h1>
+<h3 id="daws">DAWs</h3>
+<ul>
+<li>Reaper <a href="https://reaper.fm">https://reaper.fm</a></li>
+<li>FL Studio <a href="https://image-line.com/fl-studio">https://image-line.com/fl-studio</a></li>
+</ul>
+<h3 id="plugins">Plugins</h3>
+<ul>
+<li>Synth1 <a href="https://daichilab.sakura.ne.jp/softsynth">https://daichilab.sakura.ne.jp/softsynth</a></li>
+</ul>
+<h3 id="misc">Misc.</h3>
+<ul>
+<li>SunVox <a href="https://warmplace.ru/soft/sunvox/">https://warmplace.ru/soft/sunvox/</a></li>
+</ul></main>
+    <footer>
+      <div>by Carston Wiebe</div>
+      <div>on Apr 09 2026 (gen. 260409)</div>
+    </footer>
+    <script type="module">
+const keybinds = {
+    "g": (ev) => window.scrollTo(0, 0),
+    "G": (ev) => window.scrollTo(0, document.body.clientHeight),
+    "d": (ev) => window.scrollBy(0, window.innerHeight),
+    "u": (ev) => window.scrollBy(0, -window.innerHeight),
+    "h": (ev) => window.scrollBy(-128, 0),
+    "j": (ev) => window.scrollBy(0, 128),
+    "k": (ev) => window.scrollBy(0, -128),
+    "l": (ev) => window.scrollBy(128, 0),
+}
+
+const main = () => {
+    Object.entries(keybinds).forEach(([key, bind]) => {
+        document.addEventListener("keydown", (ev) => {
+            if (document.activeElement !== document.body || ev.key !== key) {
+                return
+            }
+            bind(ev)
+        })
+    })
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", main)
+} else {
+    main()
+}
+</script>
+  </body>
+</html>

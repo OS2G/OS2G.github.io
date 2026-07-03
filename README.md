@@ -15,11 +15,10 @@ for development of the site.
 the site, so they aren't technically required, but they are needed if you want
 to preview the site locally.)
 
-- [python3](https://www.python.org/) is needed to run the SSG script, and can
+- [uv](https://docs.astral.sh/uv/) is needed to run the SSG script, and can
   also be used to serve the site locally.
 - [kera](https://github.com/ctwiebe23/kera) is used to build templated pages,
-  such as the members page.  It is a python package that can be installed
-  locally using `pip install -r ./requirements.txt`.
+  such as the members page.  It will be installed by `uv`.
 
 ### Recommended
 
@@ -52,13 +51,11 @@ to preview the site locally.)
     files — this is for prettier URLs.
 - The destination directory is `./www/`.  This is the directory published to
   Github Pages.
-- The SSG program can be found in `./ssg.py`.  It can be ran with `python3
-  ./ssg.py`.
+- The SSG program can be found in `./ssg.py`.  It can be ran with `uv run
+  ./ssg.py --auto-index`.
 - The `./justfile` aliases common actions like building and serving the site.
   Requires `just` to be installed, but you can also view the full commands by
   opening the file.
-- The SSG's dependencies are listed in `./requirements.txt`, and can be
-  installed with `pip install -r requirements.txt`.
 
 ## Conventions
 

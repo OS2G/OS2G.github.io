@@ -11,6 +11,7 @@ import argparse
 import shutil
 import sys
 import json
+import html
 
 import kera
 
@@ -148,25 +149,26 @@ def main():
             return
 
         dest_path = dest_dir / "index.html"
-        html = (
-            f'<h2>Index of <code>{dir.name}</code></h2><section><dl class="dirlist">'
+        index = (
+            f'<h2>Index of <code>{html.escape(dir.name)}</code></h2><section><dl class="dirlist">'
             + "<dt>DIR</dt>"
             + '<dd><a href=".." target="_self"><code>..</code></a></dd>'
         )
 
-        # TODO: sanitize HTML
         for path in sorted(dir.iterdir(), key=str):
             ext = path.suffix[1:].upper() or "TXT" if path.is_file() else "DIR"
+            ext = html.escape(ext)
             target = "_blank" if path.is_file() else "_self"
-            html += (
+            path_name = html.escape(path.name)
+            index += (
                 f"<dt>{ext}</dt>"
-                + f'<dd><a href="./{path.name}" target="{target}">'
-                + f'<code>{path.name if path.is_file() else (path.name + "/")}</code>'
+                + f'<dd><a href="./{path_name}" target="{target}">'
+                + f'<code>{path_name if path.is_file() else (path_name + "/")}</code>'
                 + "</a></dd>"
             )
 
-        html += "</dl></section>"
-        page = layout.replace(args.content_string, html)
+        index += "</dl></section>"
+        page = layout.replace(args.content_string, index)
         dest_path.write_text(page, encoding=ENCODING)
 
     def copy_dir_and_process_html(dir_path: Path, dest_dir_path: Path):

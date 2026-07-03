@@ -4,7 +4,7 @@ build:
 
 # Runs the build script anytime a file in ./src changes
 watch:
-	watchexec -w ./src -- just build
+	watchexec -w ./src -w ./data.json -- just build
 
 # Removes the ./www directory
 clean:

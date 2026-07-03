@@ -1,0 +1,9 @@
+[project]
+name = "os2g-club"
+version = "0.1.0"
+description = "Club website for OS2G at the University of Nebraska-Lincoln"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "kera==1.1.0",
+]

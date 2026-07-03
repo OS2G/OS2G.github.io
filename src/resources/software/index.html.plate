@@ -1,0 +1,25 @@
+<h2>Software Recommendations</h2>
+<section>
+  A collection of FOSS software recommendations and alternatives.  To make
+  your own contributions, clone <a href="https://github.com/os2g/os2g.github.io">this repo</a>,
+  edit <code>./data.json</code>, and submit a pull request.
+</section>
+<section>
+  ##recommendations{{
+  <section class="recommendation">
+    <h3 class="recommendation-name"><a href="##href##" title="##href##">##name##</a></h3>
+    <p class="recommendation-tagline">##tagline##</p>
+    ##[imgPath]{{
+    <img class="recommendation-logo"
+        src="##imgPath##"
+        alt="Logo for ##name##"
+        title="Logo for ##name##"
+        width="150"
+        height="150"
+        />
+    }}
+    <p class="recommendation-description">##desc##</p>
+    </ul>
+  </section>
+  }}
+</section>

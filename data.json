@@ -18,6 +18,50 @@
     { "date": "APR 30 2026", "name": "Dead week (No meeting)" },
     { "date": "MAY 07 2026", "name": "Finals week (No meeting)" }
   ],
+  "recommendations": [
+    {
+      "name": "Collabora Online",
+      "href": "https://www.collaboraonline.com/",
+      "imgPath": "/images/collabora-logo.png",
+      "tagline": "Collaborative Open-Source Document Editing",
+      "desc": "Collabora Online is a powerful collaborative office suite that supports all major document, spreadsheet and presentation file formats, which you can integrate into your own infrastructure."
+    },
+    {
+      "name": "OBS",
+      "href": "https://obsproject.com/",
+      "imgPath": "/images/obs_logo.png",
+      "tagline": "Open Broadcaster Software",
+      "desc": "Free and open source software for video recording and live streaming."
+    },
+    {
+      "name": "kdenlive",
+      "href": "https://kdenlive.org/",
+      "imgPath": "/images/kdenlive_logo.png",
+      "tagline": "KDE Non-Linear Video Editor",
+      "desc": "Kdenlive is a video editing application with support for many audio and video formats. It offers advanced editing features, a variety of effects and transitions, color correction, audio post-production, and subtitling tools."
+    },
+    {
+      "name": "KiCad",
+      "href": "https://www.kicad.org/",
+      "imgPath": "/images/kicad_logo.jpg",
+      "tagline": "A Cross Platform and Open Source PCB Design Suite",
+      "desc": "KiCad is a free and open-source electronics design automation (EDA) suite. It features schematic capture, integrated circuit simulation, printed circuit board (PCB) layout, 3D rendering, and plotting/data export to numerous formats.  KiCad has minimal system requirements and runs on Linux, Windows, and macOS."
+    },
+    {
+      "name": "OpenSCAD",
+      "href": "https://openscad.org/",
+      "imgPath": "/images/openscad_logo.png",
+      "tagline": "The Programmers Solid 3D CAD Modeller",
+      "desc": "OpenSCAD is a solid 3D modeler that enables the creation of parametric models using its scripting language. Models are created by utilizing a technique called constructive solid geometry. According to this technique, simple objects can be transformed and combined in order to create almost any complex model."
+    },
+    {
+      "name": "Kile",
+      "href": "https://kile.sourceforge.io/",
+      "imgPath": "/images/kile_logo.png",
+      "tagline": "An Integrated LaTeX Editing Environment",
+      "desc": "Kile is a user-friendly TeX/LaTeX editor by KDE. Kile is available for many architectures and operating systems such as PC, Mac, and BSD, including Linux and Microsoft Windows."
+    }
+  ],
   "profiles": [
     {
       "name": "Carston Wiebe",

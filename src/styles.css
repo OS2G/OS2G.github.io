@@ -310,6 +310,14 @@ section.recommendation {
     "desc logo" 1fr
     / 1fr 150px;
 
+  @media (width < 50rem) {
+    grid-template:
+      "name logo" min-content
+      "tagline logo" 1fr
+      "desc desc" min-content
+    / 1fr 100px;
+  }
+
   &+section.recommendation {
     margin-top: 4rem;
   }

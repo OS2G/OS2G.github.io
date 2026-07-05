@@ -60,6 +60,13 @@
       "imgPath": "/images/kile_logo.png",
       "tagline": "An Integrated LaTeX Editing Environment",
       "desc": "Kile is a user-friendly TeX/LaTeX editor by KDE. Kile is available for many architectures and operating systems such as PC, Mac, and BSD, including Linux and Microsoft Windows."
+    },
+    {
+      "name": "RapidRaw",
+      "href": "https://www.getrapidraw.com/",
+      "imgPath": "/images/RapidRaw_logo.png",
+      "tagline": "A non-destructive and GPU-accelerated RAW image editor",
+      "desc": "RapidRaw is a user-friendly and open source image editor written in rust. It offers most of the same features as Adobe Lightroom and runs on all operating systems."
     }
   ],
   "profiles": [

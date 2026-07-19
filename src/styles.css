@@ -249,6 +249,7 @@ dl.dirlist {
     white-space: nowrap;
     color: var(--os2g-faded-text);
     padding-right: 1rem;
+    font-family: DMMono, monospace;
 
     &:nth-child(4n + 1) {
       background: var(--os2g-bg2);

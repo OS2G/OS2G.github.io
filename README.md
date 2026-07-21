@@ -1,6 +1,6 @@
 # OS2G.github.io
 
-> **Note**
+> [!IMPORTANT]
 > This repository has been migrated to Codeberg at
 > <https://codeberg.org/OS2G/pages>.
 

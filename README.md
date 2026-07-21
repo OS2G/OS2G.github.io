@@ -1,5 +1,9 @@
 # OS2G.github.io
 
+> **Note**
+> This repository has been migrated to Codeberg at
+> <https://codeberg.org/OS2G/pages>.
+
 Club website for the Operating Systems & Open-Source Group at the University of
 Nebraska-Lincoln.  The site is written in vanilla HTML, CSS, and javascript,
 and is accompanied by a simple SSG written in Python.
